@@ -1,0 +1,11 @@
+{
+    "name": "website-relay-fund",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "preview": "npx serve src",
+      "preview:dist": "npx serve dist",
+      "pack": "node scripts/pack-single-html.mjs"
+    }
+  }
