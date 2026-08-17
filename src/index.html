@@ -1,242 +1,341 @@
 <!DOCTYPE html>
-<html lang="vi"><head>
+<html lang="vi" data-theme="relay-light">
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Relay Fund – Học bổng Sen Hồng</title>
-  <meta name="description" content="The Relay Fund – Học bổng Sen Hồng: Học bổng dành riêng cho nữ sinh Việt Nam tài năng, nghị lực, vượt khó. Ứng tuyển ngay.">
-  
+  <meta name="description"
+    content="The Relay Fund – Học bổng Sen Hồng: Học bổng dành riêng cho nữ sinh Việt Nam tài năng, nghị lực, vượt khó. Ứng tuyển ngay.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <style>/* vietnamese */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/a2fabf87-858e-40bc-bd46-404157a12bf3.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/632a48c0-c88f-4690-befb-e9a62ee6133c.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/e628ecf6-6183-46cb-be7c-50927575d483.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/af62f6d6-58bc-4653-a922-be5b24f3d123.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/18dea68a-2d80-4c5b-92ce-51fe352bb678.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/ad5d845b-5f55-44d5-8ae3-30ecb2303a29.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/3d98c4ac-3550-46f9-b51b-93de6ce9a517.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/53094d3f-03ba-4ef5-98c9-6ae4f1b79618.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/686f67d0-f283-42ab-ae3e-1565a971b062.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/a15578b4-ab9a-4ac3-9c45-1b7f4ad9642d.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/0491a055-dae2-4890-971e-a4c97cc9723f.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fcd468c4-bb78-4382-9d44-d453c25f2964.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/ae0f84f1-dd89-4c13-8646-03bc6ccb0678.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/f13aa72f-a281-4071-96d5-617d9a2be0af.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/2fe896bd-a34b-4cd1-93fe-4b6bececb386.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("assets/9357d488-0a3e-47df-b32a-dfa457ea8336.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("assets/c5a881ab-35f5-4130-ac7b-03eb4f37667d.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("assets/af8dbd9c-455a-42d9-b71b-a103fad5d321.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("assets/58b12b05-aabf-4224-bb08-7d003119b949.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("assets/a19b8024-3265-4376-a0c5-a24be5d17dbe.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Be Vietnam Pro';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("assets/47edc6bb-19f1-420f-9edd-b7a4bd19ac7e.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-</style>
+  <style>
+    /* vietnamese */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url("assets/a2fabf87-858e-40bc-bd46-404157a12bf3.woff2") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url("assets/632a48c0-c88f-4690-befb-e9a62ee6133c.woff2") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url("assets/e628ecf6-6183-46cb-be7c-50927575d483.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("assets/af62f6d6-58bc-4653-a922-be5b24f3d123.woff2") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("assets/18dea68a-2d80-4c5b-92ce-51fe352bb678.woff2") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("assets/ad5d845b-5f55-44d5-8ae3-30ecb2303a29.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("assets/3d98c4ac-3550-46f9-b51b-93de6ce9a517.woff2") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("assets/53094d3f-03ba-4ef5-98c9-6ae4f1b79618.woff2") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("assets/686f67d0-f283-42ab-ae3e-1565a971b062.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("assets/a15578b4-ab9a-4ac3-9c45-1b7f4ad9642d.woff2") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("assets/0491a055-dae2-4890-971e-a4c97cc9723f.woff2") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("assets/fcd468c4-bb78-4382-9d44-d453c25f2964.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("assets/ae0f84f1-dd89-4c13-8646-03bc6ccb0678.woff2") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("assets/f13aa72f-a281-4071-96d5-617d9a2be0af.woff2") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("assets/2fe896bd-a34b-4cd1-93fe-4b6bececb386.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url("assets/9357d488-0a3e-47df-b32a-dfa457ea8336.woff2") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url("assets/c5a881ab-35f5-4130-ac7b-03eb4f37667d.woff2") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url("assets/af8dbd9c-455a-42d9-b71b-a103fad5d321.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url("assets/58b12b05-aabf-4224-bb08-7d003119b949.woff2") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url("assets/a19b8024-3265-4376-a0c5-a24be5d17dbe.woff2") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Be Vietnam Pro';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url("assets/47edc6bb-19f1-420f-9edd-b7a4bd19ac7e.woff2") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
   <style>
     /* ===== TOKENS ===== */
-    :root {
-      --blue:       #1E4D96;
-      --blue-dark:  #153A74;
-      --blue-deep:  #0C1F50;
-      --pink:       #D83D8A;
-      --pink-soft:  #EF59A1;
-      --pink-pale:  #FFE8F4;
-      --cream:      #FDF7FA;
-      --rose-bg:    #FFF2F8;
-      --white:      #FFFFFF;
-      --text:       #111827;
-      --muted:      #6B7280;
-      --border:     #F0D8E8;
-      --radius:     16px;
-      --radius-sm:  8px;
-      --shadow:     0 4px 24px rgba(30,77,150,.10);
-      --shadow-lg:  0 12px 48px rgba(30,77,150,.16);
-      --transition: .3s cubic-bezier(.4,0,.2,1);
+    :root[data-theme="relay-light"] {
+      color-scheme: light;
+
+      /* Brand theme */
+      --brand-primary: #2F5FAF;
+      --brand-primary-hover: #244D91;
+      --brand-primary-deep: #173568;
+      --brand-accent: #C93680;
+      --brand-accent-hover: #A92A69;
+      --brand-accent-soft: #EA519D;
+
+      /* Semantic surfaces and content */
+      --color-background: #FAFCFF;
+      --color-surface: #FFFFFF;
+      --color-surface-blue: #EEF4FF;
+      --color-surface-pink: #FFF1F7;
+      --color-text: #17233B;
+      --color-text-muted: #64748B;
+      --color-border: #DCE6F3;
+      --color-on-brand: #FFFFFF;
+      --color-success: #3A9B7A;
+
+      /* Component theme */
+      --nav-background: rgba(255, 255, 255, .94);
+      --nav-background-scrolled: rgba(255, 255, 255, .98);
+      --nav-text: #294B7A;
+      --nav-hover: #EEF4FF;
+      --hero-background: linear-gradient(135deg, #F4F8FF 0%, #EEF4FF 48%, #FFF1F7 100%);
+      --footer-background: #173568;
+      --overlay: rgba(23, 53, 104, .62);
+
+      /* Backward-compatible aliases used by existing components */
+      --blue: var(--brand-primary);
+      --blue-dark: var(--brand-primary-hover);
+      --blue-deep: var(--brand-primary-deep);
+      --pink: var(--brand-accent);
+      --pink-soft: var(--brand-accent-soft);
+      --pink-pale: var(--color-surface-pink);
+      --cream: var(--color-background);
+      --rose-bg: var(--color-surface-pink);
+      --white: var(--color-surface);
+      --text: var(--color-text);
+      --muted: var(--color-text-muted);
+      --border: var(--color-border);
+      --radius: 16px;
+      --radius-sm: 8px;
+      --shadow: 0 6px 24px rgba(47, 95, 175, .08);
+      --shadow-lg: 0 18px 48px rgba(47, 95, 175, .13);
+      --transition: .3s cubic-bezier(.4, 0, .2, 1);
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
     body {
       font-family: 'Be Vietnam Pro', sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: var(--color-background);
       line-height: 1.65;
       overflow-x: hidden;
     }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button { cursor: pointer; font-family: inherit; }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+    }
 
     /* ===== UTILITY ===== */
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 96px 0; }
-    .section--cream { background: var(--rose-bg); }
-    .section--blue  { background: var(--blue-deep); color: var(--white); }
-    .section--pink  { background: var(--pink); color: var(--white); }
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 96px 0;
+      scroll-margin-top: 72px;
+    }
+
+    .section--cream {
+      background: var(--rose-bg);
+    }
+
+    .section--blue {
+      background: var(--blue-deep);
+      color: var(--white);
+    }
+
+    .section--pink {
+      background: var(--pink);
+      color: var(--white);
+    }
+
     .badge {
       display: inline-block;
       padding: 6px 16px;
@@ -246,15 +345,29 @@
       letter-spacing: .08em;
       text-transform: uppercase;
     }
-    .badge--pink  { background: var(--pink-pale); color: var(--pink); }
-    .badge--blue  { background: rgba(27,80,190,.12); color: var(--blue); }
-    .badge--white { background: rgba(255,255,255,.18); color: var(--white); }
+
+    .badge--pink {
+      background: var(--pink-pale);
+      color: var(--pink);
+    }
+
+    .badge--blue {
+      background: rgba(27, 80, 190, .12);
+      color: var(--blue);
+    }
+
+    .badge--white {
+      background: rgba(255, 255, 255, .18);
+      color: var(--white);
+    }
+
     .section-label {
       display: flex;
       align-items: center;
       gap: 12px;
       margin-bottom: 18px;
     }
+
     .section-label::after {
       content: '';
       flex: 1;
@@ -263,12 +376,34 @@
       background: currentColor;
       opacity: .3;
     }
-    h1,h2,h3,h4 { line-height: 1.2; font-weight: 800; }
-    h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
-    h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
-    .text-pink { color: var(--pink); }
-    .text-blue { color: var(--blue); }
-    .text-muted { color: var(--muted); }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    }
+
+    .text-pink {
+      color: var(--pink);
+    }
+
+    .text-blue {
+      color: var(--blue);
+    }
+
+    .text-muted {
+      color: var(--muted);
+    }
 
     /* ===== BUTTONS ===== */
     .btn {
@@ -283,61 +418,187 @@
       transition: var(--transition);
       white-space: nowrap;
     }
-    .btn--pink  { background: var(--pink); color: var(--white); }
-    .btn--pink:hover { background: #c41f68; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,41,124,.35); }
-    .btn--blue  { background: var(--blue); color: var(--white); }
-    .btn--blue:hover { background: var(--blue-dark); transform: translateY(-2px); }
+
+    .btn--pink {
+      background: var(--pink);
+      color: var(--white);
+    }
+
+    .btn--pink:hover {
+      background: var(--brand-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 41, 124, .35);
+    }
+
+    .btn--blue {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .btn--blue:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+    }
+
     .btn--outline-white {
       background: transparent;
       color: var(--white);
-      border-color: rgba(255,255,255,.5);
+      border-color: rgba(255, 255, 255, .5);
     }
-    .btn--outline-white:hover { background: rgba(255,255,255,.12); border-color: var(--white); }
+
+    .btn--outline-white:hover {
+      background: rgba(255, 255, 255, .12);
+      border-color: var(--white);
+    }
+
     .btn--outline-blue {
       background: transparent;
       color: var(--blue);
       border-color: var(--blue);
     }
-    .btn--outline-blue:hover { background: var(--blue); color: var(--white); }
-    .btn-icon { width: 18px; height: 18px; }
+
+    .btn--outline-blue:hover {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+    }
 
     /* ===== NAV ===== */
     .nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
-      background: rgba(9,28,90,.96);
+      background: rgba(9, 28, 90, .96);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
       transition: var(--transition);
     }
+
     .nav.scrolled {
-      background: rgba(9,28,90,.99);
-      box-shadow: 0 4px 24px rgba(0,0,0,.25);
+      background: rgba(9, 28, 90, .99);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, .25);
     }
+
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 70px;
     }
-    .nav-logo { display: flex; align-items: center; }
-    .nav-logo img { height: 38px; width: auto; filter: brightness(0) invert(1); }    .nav-links {
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 38px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
       gap: 4px;
       list-style: none;
     }
+
+    .nav-links > li {
+      position: relative;
+    }
+
     .nav-links a {
       padding: 8px 14px;
       border-radius: 8px;
       font-size: .875rem;
       font-weight: 500;
-      color: rgba(255,255,255,.8);
+      color: rgba(255, 255, 255, .8);
       transition: var(--transition);
     }
-    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,.1); }
-    .nav-cta { display: flex; align-items: center; gap: 10px; }
+
+    .nav-links a:hover {
+      color: var(--white);
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .nav-link-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      padding: 8px 14px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: rgba(255, 255, 255, .8);
+      font: inherit;
+      font-size: .875rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .nav-link-toggle:hover,
+    .nav-link-toggle:focus-visible {
+      color: var(--white);
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .nav-link-toggle::after {
+      content: '▾';
+      font-size: .72rem;
+      opacity: .8;
+      transition: transform .2s ease;
+    }
+
+    .nav-item.open .nav-link-toggle::after {
+      transform: rotate(180deg);
+    }
+
+    .nav-submenu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      display: none;
+      flex-direction: column;
+      min-width: 220px;
+      padding: 8px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .97);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, .16);
+      border: 1px solid rgba(9, 28, 90, .08);
+      z-index: 5;
+    }
+
+    .nav-item.open .nav-submenu {
+      display: flex;
+    }
+
+    .nav-submenu a {
+      color: var(--blue-deep);
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .nav-submenu a:hover {
+      color: var(--pink);
+      background: rgba(232, 41, 124, .08);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -346,8 +607,11 @@
       border: none;
       padding: 8px;
     }
+
     .nav-hamburger span {
-      display: block; width: 24px; height: 2px;
+      display: block;
+      width: 24px;
+      height: 2px;
       background: var(--white);
       border-radius: 2px;
       transition: var(--transition);
@@ -365,7 +629,11 @@
       justify-content: center;
       gap: 8px;
     }
-    .nav-mobile.open { display: flex; }
+
+    .nav-mobile.open {
+      display: flex;
+    }
+
     .nav-mobile a {
       font-size: 1.5rem;
       font-weight: 700;
@@ -374,14 +642,62 @@
       border-radius: 12px;
       transition: var(--transition);
     }
-    .nav-mobile a:hover { background: rgba(255,255,255,.1); }
+
+    .nav-mobile a:hover {
+      background: rgba(255, 255, 255, .1);
+    }
+
     .nav-mobile-close {
       position: absolute;
-      top: 20px; right: 20px;
-      background: none; border: none;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
       color: var(--white);
       font-size: 2rem;
       line-height: 1;
+    }
+
+    .nav-mobile-toggle {
+      padding: 12px 32px;
+      border: 0;
+      border-radius: 12px;
+      background: transparent;
+      color: var(--white);
+      font: inherit;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .nav-mobile-toggle::after {
+      content: ' ▾';
+      font-size: .9rem;
+    }
+
+    .nav-mobile-submenu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 4px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .nav-mobile-submenu.open {
+      display: flex;
+    }
+
+    .nav-mobile-submenu a {
+      max-width: 320px;
+      padding: 9px 20px;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .nav-mobile-apply {
+      margin-top: 18px;
+      font-size: 1rem !important;
     }
 
     /* ===== HERO ===== */
@@ -394,32 +710,43 @@
       overflow: hidden;
       padding-top: 70px;
     }
+
     .hero-bg {
       position: absolute;
       inset: 0;
       pointer-events: none;
     }
+
     .hero-circle-1 {
       position: absolute;
-      width: 700px; height: 700px;
+      width: 700px;
+      height: 700px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(239,89,161,.22) 0%, transparent 70%);
-      top: -150px; right: -150px;
+      background: radial-gradient(circle, rgba(239, 89, 161, .22) 0%, transparent 70%);
+      top: -150px;
+      right: -150px;
     }
+
     .hero-circle-2 {
       position: absolute;
-      width: 500px; height: 500px;
+      width: 500px;
+      height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(30,77,150,.4) 0%, transparent 70%);
-      bottom: -50px; left: -100px;
+      background: radial-gradient(circle, rgba(30, 77, 150, .4) 0%, transparent 70%);
+      bottom: -50px;
+      left: -100px;
     }
+
     .hero-circle-3 {
       position: absolute;
-      width: 300px; height: 300px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(239,89,161,.12) 0%, transparent 70%);
-      top: 40%; left: 35%;
+      background: radial-gradient(circle, rgba(239, 89, 161, .12) 0%, transparent 70%);
+      top: 40%;
+      left: 35%;
     }
+
     .hero-lotus {
       position: absolute;
       right: 5%;
@@ -429,34 +756,74 @@
       height: 480px;
       opacity: .07;
     }
+
     /* Decorative floating petals */
     .hero-petal {
       position: absolute;
       border-radius: 50% 0 50% 0;
-      background: rgba(239,89,161,.15);
+      background: rgba(239, 89, 161, .15);
       animation: floatPetal 8s ease-in-out infinite;
     }
-    .hero-petal:nth-child(1){ width:80px;height:80px;top:15%;left:8%;animation-delay:0s; }
-    .hero-petal:nth-child(2){ width:50px;height:50px;top:65%;left:12%;animation-delay:2s;border-radius:0 50% 0 50%; }
-    .hero-petal:nth-child(3){ width:64px;height:64px;top:25%;right:22%;animation-delay:4s; }
-    @keyframes floatPetal {
-      0%,100% { transform: translateY(0) rotate(0deg); opacity:.15; }
-      50%      { transform: translateY(-18px) rotate(15deg); opacity:.25; }
+
+    .hero-petal:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      top: 15%;
+      left: 8%;
+      animation-delay: 0s;
     }
+
+    .hero-petal:nth-child(2) {
+      width: 50px;
+      height: 50px;
+      top: 65%;
+      left: 12%;
+      animation-delay: 2s;
+      border-radius: 0 50% 0 50%;
+    }
+
+    .hero-petal:nth-child(3) {
+      width: 64px;
+      height: 64px;
+      top: 25%;
+      right: 22%;
+      animation-delay: 4s;
+    }
+
+    @keyframes floatPetal {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: .15;
+      }
+
+      50% {
+        transform: translateY(-18px) rotate(15deg);
+        opacity: .25;
+      }
+    }
+
     .hero-content {
       position: relative;
       z-index: 1;
       padding: 80px 0;
     }
+
     .hero-eyebrow {
-      display: flex; align-items: center; gap: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 28px;
     }
+
     .hero-eyebrow-line {
-      width: 40px; height: 2px;
+      width: 40px;
+      height: 2px;
       background: var(--pink);
       border-radius: 2px;
     }
+
     .hero-eyebrow-text {
       font-size: .8rem;
       font-weight: 700;
@@ -464,6 +831,7 @@
       text-transform: uppercase;
       color: var(--pink-soft);
     }
+
     .hero h1 {
       font-size: clamp(2.5rem, 6vw, 4.5rem);
       color: var(--white);
@@ -471,88 +839,53 @@
       margin-bottom: 24px;
       max-width: 760px;
     }
+
     .hero h1 em {
       font-style: normal;
       color: var(--pink);
     }
+
     .hero-sub {
       font-size: 1.1rem;
-      color: rgba(255,255,255,.72);
+      color: rgba(255, 255, 255, .72);
       max-width: 520px;
       margin-bottom: 40px;
       line-height: 1.7;
     }
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
       margin-bottom: 72px;
     }
+
     .hero-stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 24px;
       padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,.12);
+      border-top: 1px solid rgba(255, 255, 255, .12);
     }
+
     .hero-stat-num {
       font-size: 2.25rem;
       font-weight: 900;
       color: var(--white);
       line-height: 1;
     }
-    .hero-stat-num span { color: var(--pink); }
+
+    .hero-stat-num span {
+      color: var(--pink);
+    }
+
     .hero-stat-label {
       font-size: .78rem;
-      color: rgba(255,255,255,.55);
+      color: rgba(255, 255, 255, .55);
       font-weight: 500;
       margin-top: 4px;
       text-transform: uppercase;
       letter-spacing: .06em;
-    }
-
-    /* ===== TRUST BAR ===== */
-    .trust-bar {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 20px 0;
-    }
-    .trust-bar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .trust-label {
-      font-size: .78rem;
-      font-weight: 600;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      white-space: nowrap;
-    }
-    .trust-partners {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .trust-partner-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 100px;
-      border: 1.5px solid var(--border);
-      font-size: .78rem;
-      font-weight: 600;
-      color: var(--muted);
-    }
-    .trust-partner-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--blue);
     }
 
     /* ===== ABOUT ===== */
@@ -562,29 +895,11 @@
       gap: 72px;
       align-items: center;
     }
+
     .about-visual {
       position: relative;
     }
-    .about-activity-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--pink);
-      color: var(--white);
-      font-size: .75rem;
-      font-weight: 700;
-      padding: 8px 16px;
-      border-radius: 100px;
-      margin-bottom: 14px;
-      box-shadow: 0 4px 16px rgba(232,41,124,.35);
-      letter-spacing: .03em;
-    }
-    .about-activity-badge .dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.8);
-      display: inline-block;
-    }
+
     .about-photo-main {
       width: 100%;
       aspect-ratio: 4/5;
@@ -592,13 +907,19 @@
       overflow: hidden;
       position: relative;
     }
+
     .about-photo-main img {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       display: block;
       transition: transform .6s ease;
     }
-    .about-photo-main:hover img { transform: scale(1.04); }
+
+    .about-photo-main:hover img {
+      transform: scale(1.04);
+    }
+
     .about-photo-small {
       position: absolute;
       bottom: 64px;
@@ -608,60 +929,86 @@
       border-radius: 18px;
       overflow: hidden;
       border: 4px solid var(--white);
-      box-shadow: 0 8px 32px rgba(0,0,0,.22);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .22);
     }
+
     .about-photo-small img {
-      width: 100%; height: 100%;
-      object-fit: cover; display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
-    .about-quote-card {
-      position: absolute;
-      bottom: -24px;
-      left: 16px;
-      background: var(--white);
-      border-radius: 16px;
-      padding: 18px 22px;
-      box-shadow: var(--shadow-lg);
-      max-width: 230px;
-      border-left: 3px solid var(--pink);
+
+    .about-text .section-label {
+      margin-bottom: 16px;
     }
-    .about-quote-card p {
-      font-size: .875rem;
-      color: var(--text);
-      line-height: 1.6;
-      font-weight: 500;
+
+    .about-text h2 {
+      margin-bottom: 20px;
     }
-    .about-quote-card .aq-author {
-      margin-top: 10px;
-      font-size: .75rem;
+
+    .about-text p {
       color: var(--muted);
+      margin-bottom: 16px;
+      line-height: 1.75;
     }
-    .about-text .section-label { margin-bottom: 16px; }
-    .about-text h2 { margin-bottom: 20px; }
-    .about-text p { color: var(--muted); margin-bottom: 16px; line-height: 1.75; }
+
     .about-pillars {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin-top: 32px;
     }
+
     .pillar-card {
       background: var(--white);
       border-radius: 14px;
       padding: 20px;
       border: 1.5px solid var(--border);
     }
+
     .pillar-icon {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 12px;
       font-size: 1.2rem;
     }
-    .pillar-icon--pink { background: var(--pink-pale); }
-    .pillar-icon--blue { background: rgba(27,80,190,.1); }
-    .pillar-card h4 { font-size: .95rem; margin-bottom: 4px; }
-    .pillar-card p  { font-size: .82rem; color: var(--muted); line-height: 1.55; }
+
+    .pillar-icon--pink {
+      background: var(--pink-pale);
+    }
+
+    .pillar-icon--blue {
+      background: rgba(27, 80, 190, .1);
+    }
+
+    .pillar-card h4 {
+      font-size: .95rem;
+      margin-bottom: 4px;
+    }
+
+    .pillar-card p {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .pillar-image-card {
+      min-height: 180px;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1.5px solid var(--border);
+    }
+
+    .pillar-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     /* ===== IMPACT ===== */
     .impact-section {
@@ -669,26 +1016,43 @@
       position: relative;
       overflow: hidden;
     }
+
     .impact-section::before {
       content: '';
       position: absolute;
       inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
+
     .impact-header {
       text-align: center;
       margin-bottom: 64px;
     }
-    .impact-header h2 { color: var(--white); margin-bottom: 12px; }
-    .impact-header p  { color: rgba(255,255,255,.65); max-width: 480px; margin: 0 auto; }
+
+    .impact-header h2 {
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .impact-header p {
+      color: rgba(255, 255, 255, .65);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
     .impact-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
+
+    .about-impact-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .impact-card {
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .15);
       border-radius: 20px;
       padding: 36px 28px;
       text-align: center;
@@ -696,10 +1060,12 @@
       overflow: hidden;
       transition: var(--transition);
     }
+
     .impact-card:hover {
-      background: rgba(255,255,255,.16);
+      background: rgba(255, 255, 255, .16);
       transform: translateY(-4px);
     }
+
     .impact-card-num {
       font-size: 3rem;
       font-weight: 900;
@@ -707,14 +1073,43 @@
       line-height: 1;
       margin-bottom: 8px;
     }
+
     .impact-card-num em {
       font-style: normal;
       color: var(--pink-soft);
     }
+
     .impact-card-label {
       font-size: .825rem;
-      color: rgba(255,255,255,.65);
+      color: rgba(255, 255, 255, .65);
       font-weight: 500;
+    }
+
+    .impact-card-icon {
+      margin-bottom: 16px;
+      font-size: 2rem;
+    }
+
+    .impact-card h3 {
+      margin-bottom: 12px;
+      color: var(--white);
+      font-size: 1.15rem;
+    }
+
+    .impact-card p {
+      color: rgba(255, 255, 255, .72);
+      font-size: .9rem;
+      line-height: 1.7;
+    }
+
+    .about-impact-closing {
+      max-width: 820px;
+      margin: 40px auto 0;
+      color: rgba(255, 255, 255, .82);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.8;
+      text-align: center;
     }
 
     /* ===== PROGRAMS ===== */
@@ -723,8 +1118,21 @@
       max-width: 640px;
       margin: 0 auto 64px;
     }
-    .programs-header h2 { margin-bottom: 14px; }
-    .programs-header p  { color: var(--muted); }
+
+    .programs-header h2 {
+      margin-bottom: 14px;
+    }
+
+    .programs-header p {
+      color: var(--muted);
+    }
+
+    .programs-kicker {
+      margin-bottom: 10px;
+      color: var(--blue) !important;
+      font-weight: 700;
+    }
+
     .program-card {
       background: var(--white);
       border-radius: 28px;
@@ -733,8 +1141,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+
     .program-visual {
-      background: linear-gradient(135deg, var(--pink) 0%, #9b1a5c 100%);
+      background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-accent-hover) 100%);
       padding: 56px 48px;
       display: flex;
       flex-direction: column;
@@ -742,21 +1151,27 @@
       position: relative;
       overflow: hidden;
     }
+
     .program-visual::before {
       content: '';
       position: absolute;
       inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='35' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='20' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3C/svg%3E") 0 0/80px 80px;
     }
+
     .program-lotus-bg {
       position: absolute;
-      right: -40px; bottom: -40px;
-      width: 280px; height: 280px;
+      right: -40px;
+      bottom: -40px;
+      width: 280px;
+      height: 280px;
       opacity: .1;
     }
+
     .prog-title {
       position: relative;
     }
+
     .prog-name {
       font-size: 2rem;
       font-weight: 900;
@@ -764,29 +1179,44 @@
       line-height: 1.15;
       margin-bottom: 8px;
     }
+
     .prog-en {
       font-size: .85rem;
-      color: rgba(255,255,255,.65);
+      color: rgba(255, 255, 255, .65);
       font-weight: 500;
     }
+
     .prog-stat {
       position: relative;
       padding: 20px 24px;
-      background: rgba(255,255,255,.15);
+      background: rgba(255, 255, 255, .15);
       border-radius: 14px;
       backdrop-filter: blur(8px);
     }
+
     .prog-stat-num {
       font-size: 2.5rem;
       font-weight: 900;
       color: var(--white);
     }
-    .prog-stat-label { font-size: .78rem; color: rgba(255,255,255,.7); }
+
+    .prog-stat-label {
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .7);
+    }
+
     .program-details {
       padding: 48px 48px;
     }
-    .program-details h3 { margin-bottom: 20px; }
-    .prog-detail-group { margin-bottom: 28px; }
+
+    .program-details h3 {
+      margin-bottom: 20px;
+    }
+
+    .prog-detail-group {
+      margin-bottom: 28px;
+    }
+
     .prog-detail-group h4 {
       font-size: .75rem;
       font-weight: 700;
@@ -795,9 +1225,13 @@
       color: var(--muted);
       margin-bottom: 12px;
     }
+
     .prog-tags {
-      display: flex; flex-wrap: wrap; gap: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
+
     .prog-tag {
       padding: 6px 14px;
       border-radius: 8px;
@@ -806,27 +1240,45 @@
       background: var(--cream);
       color: var(--text);
     }
+
     .prog-steps {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
     .prog-step {
       display: flex;
       align-items: flex-start;
       gap: 12px;
     }
+
     .prog-step-num {
       flex-shrink: 0;
-      width: 28px; height: 28px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       background: var(--pink-pale);
       color: var(--pink);
       font-size: .78rem;
       font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .prog-step p { font-size: .875rem; color: var(--muted); line-height: 1.55; }
+
+    .prog-step p {
+      font-size: .875rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .prog-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.65;
+    }
 
     /* ===== STORIES ===== */
     .stories-header {
@@ -835,11 +1287,20 @@
       align-items: flex-end;
       margin-bottom: 48px;
     }
+
     .stories-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
+
+    .stories-intro {
+      max-width: 760px;
+      margin-top: 16px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
     .story-card {
       background: var(--white);
       border-radius: 20px;
@@ -849,7 +1310,12 @@
       transition: var(--transition);
       position: relative;
     }
-    .story-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+
+    .story-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
     .story-quote-mark {
       font-size: 4rem;
       line-height: .8;
@@ -857,12 +1323,14 @@
       font-weight: 900;
       margin-bottom: 16px;
     }
+
     .story-text {
       font-size: .9rem;
       line-height: 1.75;
       color: var(--text);
       margin-bottom: 24px;
     }
+
     .story-author {
       display: flex;
       align-items: center;
@@ -870,17 +1338,113 @@
       padding-top: 20px;
       border-top: 1px solid var(--border);
     }
+
     .story-avatar {
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: 800;
       font-size: .9rem;
       color: var(--white);
       flex-shrink: 0;
     }
-    .story-author-name { font-size: .875rem; font-weight: 700; }
-    .story-author-meta { font-size: .76rem; color: var(--muted); }
+
+    .story-author-name {
+      font-size: .875rem;
+      font-weight: 700;
+    }
+
+    .story-author-meta {
+      font-size: .76rem;
+      color: var(--muted);
+    }
+
+    .story-open {
+      margin-top: 20px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--pink);
+      font: inherit;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .story-open:hover,
+    .story-open:focus-visible {
+      text-decoration: underline;
+    }
+
+    body.dialog-open {
+      overflow: hidden;
+    }
+
+    .story-dialog[hidden] {
+      display: none;
+    }
+
+    .story-dialog {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .story-dialog-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(9, 28, 90, .72);
+      backdrop-filter: blur(5px);
+    }
+
+    .story-dialog-panel {
+      position: relative;
+      z-index: 1;
+      width: min(680px, 100%);
+      max-height: min(760px, calc(100vh - 48px));
+      overflow-y: auto;
+      padding: 42px;
+      border-radius: 26px;
+      background: var(--white);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .28);
+    }
+
+    .story-dialog-panel h2 {
+      margin: 18px 42px 8px 0;
+    }
+
+    .story-dialog-meta {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .story-dialog-copy {
+      color: var(--text);
+      line-height: 1.85;
+    }
+
+    .story-dialog-copy p + p {
+      margin-top: 16px;
+    }
+
+    .story-dialog-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 1.2rem;
+    }
 
     /* ===== GET INVOLVED ===== */
     .involved-grid {
@@ -888,6 +1452,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
+
     .involved-card {
       border-radius: 24px;
       padding: 40px 36px;
@@ -897,56 +1462,262 @@
       flex-direction: column;
       transition: var(--transition);
     }
-    .involved-card:hover { transform: translateY(-6px); }
+
+    .involved-card:hover {
+      transform: translateY(-6px);
+    }
+
     .involved-card--pink {
       background: var(--pink);
       color: var(--white);
     }
+
     .involved-card--blue {
       background: var(--blue);
       color: var(--white);
     }
+
     .involved-card--outline {
       background: var(--white);
       border: 2px solid var(--border);
     }
+
     .involved-icon {
-      width: 56px; height: 56px;
+      width: 56px;
+      height: 56px;
       border-radius: 14px;
       margin-bottom: 24px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .involved-icon--pink-bg { background: rgba(255,255,255,.2); }
-    .involved-icon--blue-bg { background: rgba(255,255,255,.15); }
-    .involved-icon--cream-bg { background: var(--cream); }
-    .involved-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
-    .involved-card--outline h3 { color: var(--text); }
+
+    .involved-icon--pink-bg {
+      background: rgba(255, 255, 255, .2);
+    }
+
+    .involved-icon--blue-bg {
+      background: rgba(255, 255, 255, .15);
+    }
+
+    .involved-icon--cream-bg {
+      background: var(--cream);
+    }
+
+    .involved-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .involved-card--outline h3 {
+      color: var(--text);
+    }
+
     .involved-card p {
       font-size: .875rem;
       line-height: 1.7;
       flex: 1;
       margin-bottom: 28px;
     }
-    .involved-card--outline p { color: var(--muted); }
+
+    .involved-card--outline p {
+      color: var(--muted);
+    }
+
     .involved-card--pink p,
-    .involved-card--blue p  { opacity: .8; }
+    .involved-card--blue p {
+      opacity: .8;
+    }
+
     .involved-bg-deco {
       position: absolute;
-      bottom: -30px; right: -30px;
-      width: 150px; height: 150px;
+      bottom: -30px;
+      right: -30px;
+      width: 150px;
+      height: 150px;
       opacity: .08;
     }
 
     /* ===== CONTACT ===== */
     .contact-grid {
       display: grid;
-      grid-template-columns: 5fr 7fr;
-      gap: 64px;
+      grid-template-columns: 1fr;
+      gap: 24px;
       align-items: start;
     }
-    .contact-info h2 { margin-bottom: 16px; }
-    .contact-info p  { color: var(--muted); margin-bottom: 32px; line-height: 1.75; }
-    .contact-links { display: flex; flex-direction: column; gap: 14px; }
+
+    .contact-info {
+      position: relative;
+      overflow: hidden;
+      padding: 38px 40px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffffff 0%, #f7faff 55%, #fff6fb 100%);
+      border: 1px solid rgba(27, 80, 190, .14);
+      box-shadow: 0 24px 70px rgba(9, 28, 90, .08);
+    }
+
+    .contact-info::before {
+      content: "";
+      position: absolute;
+      right: -50px;
+      bottom: -50px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 41, 124, .16) 0%, rgba(232, 41, 124, 0) 70%);
+      pointer-events: none;
+    }
+
+    .contact-info h2 {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 16px;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      line-height: 1.2;
+    }
+
+    .contact-info > p {
+      position: relative;
+      z-index: 1;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.85;
+      max-width: 720px;
+    }
+
+    .contact-cta {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0;
+      padding: 22px 24px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .93);
+      border: 1px solid rgba(27, 80, 190, .12);
+      box-shadow: 0 14px 38px rgba(9, 28, 90, .06);
+    }
+
+    .contact-cta-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--blue-deep);
+      letter-spacing: .01em;
+    }
+
+    .contact-cta-title .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--pink);
+      box-shadow: 0 0 0 6px rgba(232, 41, 124, .12);
+    }
+
+    .contact-cta-text {
+      margin: 0;
+      font-size: .95rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .contact-cta-link {
+      color: var(--pink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-cta-link:hover {
+      text-decoration: underline;
+    }
+
+    .contact-actions {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .contact-action {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 22px 24px;
+      border: 1px solid rgba(27, 80, 190, .14);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .9);
+      color: var(--text);
+      box-shadow: 0 12px 30px rgba(9, 28, 90, .06);
+      transition: var(--transition);
+    }
+
+    .contact-action:hover {
+      border-color: var(--pink);
+      transform: translateY(-2px);
+    }
+
+    .contact-action span {
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .contact-details {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-top: 24px;
+    }
+
+    .contact-details a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .config-link--pending {
+      cursor: not-allowed;
+      opacity: .78;
+    }
+
+    .site-notice {
+      position: fixed;
+      left: 50%;
+      bottom: 28px;
+      z-index: 3000;
+      width: min(560px, calc(100% - 32px));
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: var(--blue-deep);
+      color: var(--white);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, .25);
+      font-size: .9rem;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translate(-50%, calc(100% + 48px));
+      transition:
+        transform .25s ease,
+        opacity .2s ease,
+        visibility 0s linear .25s;
+    }
+
+    .site-notice.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0);
+      transition-delay: 0s;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
     .contact-link {
       display: flex;
       align-items: center;
@@ -954,59 +1725,37 @@
       color: var(--text);
       transition: var(--transition);
     }
-    .contact-link:hover { color: var(--blue); }
+
+    .contact-link:hover {
+      color: var(--blue);
+    }
+
     .contact-link-icon {
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
       background: var(--cream);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
     }
-    .contact-link-icon svg { width: 20px; height: 20px; }
-    .contact-link-text strong { display: block; font-size: .875rem; font-weight: 700; }
-    .contact-link-text span  { font-size: .8rem; color: var(--muted); }
 
-    .contact-form {
-      background: var(--white);
-      border-radius: 24px;
-      padding: 40px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--border);
+    .contact-link-icon svg {
+      width: 20px;
+      height: 20px;
     }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group label {
-      font-size: .8rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      padding: 12px 16px;
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      font-family: inherit;
+
+    .contact-link-text strong {
+      display: block;
       font-size: .875rem;
-      color: var(--text);
-      background: var(--white);
-      transition: var(--transition);
-      outline: none;
+      font-weight: 700;
     }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(27,80,190,.1);
+
+    .contact-link-text span {
+      font-size: .8rem;
+      color: var(--muted);
     }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-full { margin-bottom: 16px; }
-    .form-submit { margin-top: 8px; width: 100%; justify-content: center; }
 
     /* ===== FOOTER ===== */
     .footer {
@@ -1014,59 +1763,91 @@
       color: var(--white);
       padding: 64px 0 32px;
     }
+
     .footer-top {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 48px;
       margin-bottom: 48px;
       padding-bottom: 48px;
-      border-bottom: 1px solid rgba(255,255,255,.1);
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
     }
+
     .footer-brand p {
       font-size: .875rem;
-      color: rgba(255,255,255,.55);
+      color: rgba(255, 255, 255, .55);
       line-height: 1.75;
       margin-top: 16px;
       max-width: 280px;
     }
-    .footer-logo { height: 36px; filter: brightness(0) invert(1); }
+
+    .footer-logo {
+      height: 36px;
+      filter: brightness(0) invert(1);
+    }
+
     .footer-col h4 {
       font-size: .8rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .1em;
-      color: rgba(255,255,255,.45);
+      color: rgba(255, 255, 255, .45);
       margin-bottom: 20px;
     }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
     .footer-col a {
       font-size: .875rem;
-      color: rgba(255,255,255,.65);
+      color: rgba(255, 255, 255, .65);
       transition: var(--transition);
     }
-    .footer-col a:hover { color: var(--white); }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
     .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: .8rem;
-      color: rgba(255,255,255,.35);
+      color: rgba(255, 255, 255, .35);
       flex-wrap: wrap;
       gap: 16px;
     }
+
     .footer-social {
       display: flex;
       gap: 10px;
     }
+
     .footer-social a {
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       border-radius: 8px;
-      background: rgba(255,255,255,.1);
-      display: flex; align-items: center; justify-content: center;
+      background: rgba(255, 255, 255, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: var(--transition);
     }
-    .footer-social a:hover { background: var(--pink); }
-    .footer-social svg { width: 16px; height: 16px; color: var(--white); }
+
+    .footer-social a:hover {
+      background: var(--pink);
+    }
+
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+      color: var(--white);
+    }
+
     .footer-donate-chip {
       display: inline-flex;
       align-items: center;
@@ -1079,31 +1860,48 @@
       color: var(--white);
       transition: var(--transition);
     }
-    .footer-donate-chip:hover { background: #c41f68; }
+
+    .footer-donate-chip:hover {
+      background: var(--brand-accent-hover);
+    }
 
     /* ===== LANG TOGGLE ===== */
     .lang-toggle {
       display: flex;
       align-items: center;
       gap: 5px;
-      background: rgba(255,255,255,.1);
-      border: 1.5px solid rgba(255,255,255,.2);
+      background: rgba(255, 255, 255, .1);
+      border: 1.5px solid rgba(255, 255, 255, .2);
       border-radius: 100px;
       padding: 6px 14px;
       font-family: 'Be Vietnam Pro', sans-serif;
       font-size: .78rem;
       font-weight: 700;
-      color: rgba(255,255,255,.7);
+      color: rgba(255, 255, 255, .7);
       cursor: pointer;
       transition: var(--transition);
       letter-spacing: .04em;
     }
-    .lang-toggle:hover { background: rgba(255,255,255,.18); color: #fff; }
-    .lang-sep { opacity: .35; }
+
+    .lang-toggle:hover {
+      background: rgba(255, 255, 255, .18);
+      color: #fff;
+    }
+
+    .lang-sep {
+      opacity: .35;
+    }
+
     body.lang-en .lang-vi,
-    body.lang-vi .lang-en { opacity: .4; }
+    body.lang-vi .lang-en {
+      opacity: .4;
+    }
+
     body.lang-en .lang-en,
-    body.lang-vi .lang-vi { opacity: 1; color: #fff; }
+    body.lang-vi .lang-vi {
+      opacity: 1;
+      color: #fff;
+    }
 
     /* ===== BACK TO TOP ===== */
     .back-to-top {
@@ -1120,31 +1918,35 @@
       transform: translateY(16px);
       transition: opacity .35s ease, transform .35s ease;
     }
+
     .back-to-top.visible {
       opacity: 1;
       pointer-events: auto;
       transform: none;
     }
+
     .btt-btn {
       width: 52px;
       height: 52px;
       border-radius: 50%;
       background: var(--blue-deep);
-      border: 2px solid rgba(255,255,255,.15);
+      border: 2px solid rgba(255, 255, 255, .15);
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 28px rgba(9,28,90,.35);
+      box-shadow: 0 8px 28px rgba(9, 28, 90, .35);
       transition: var(--transition);
       cursor: pointer;
     }
+
     .btt-btn:hover {
       background: var(--pink);
       border-color: var(--pink);
       transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(232,41,124,.35);
+      box-shadow: 0 12px 32px rgba(232, 41, 124, .35);
     }
+
     .btt-label {
       font-size: .65rem;
       font-weight: 700;
@@ -1154,51 +1956,424 @@
       white-space: nowrap;
     }
 
+    /* ===== RELAY LIGHT THEME ===== */
+    :root[data-theme="relay-light"] .nav {
+      background: var(--nav-background);
+      border-bottom-color: var(--color-border);
+      box-shadow: 0 2px 18px rgba(47, 95, 175, .06);
+    }
+
+    :root[data-theme="relay-light"] .nav.scrolled {
+      background: var(--nav-background-scrolled);
+      box-shadow: var(--shadow);
+    }
+
+    :root[data-theme="relay-light"] .nav-logo img {
+      filter: none;
+    }
+
+    :root[data-theme="relay-light"] .nav-links a,
+    :root[data-theme="relay-light"] .nav-link-toggle,
+    :root[data-theme="relay-light"] .lang-toggle {
+      color: var(--nav-text);
+    }
+
+    :root[data-theme="relay-light"] .nav-links a:hover,
+    :root[data-theme="relay-light"] .nav-link-toggle:hover,
+    :root[data-theme="relay-light"] .nav-link-toggle:focus-visible {
+      color: var(--brand-primary);
+      background: var(--nav-hover);
+    }
+
+    :root[data-theme="relay-light"] .nav-submenu {
+      background: var(--color-surface);
+      border-color: var(--color-border);
+      box-shadow: var(--shadow-lg);
+    }
+
+    :root[data-theme="relay-light"] .nav-submenu a:hover {
+      background: var(--color-surface-pink);
+    }
+
+    :root[data-theme="relay-light"] .lang-toggle {
+      background: var(--color-surface-blue);
+      border-color: var(--color-border);
+    }
+
+    :root[data-theme="relay-light"] .lang-toggle:hover {
+      color: var(--brand-primary);
+      background: var(--color-surface-pink);
+    }
+
+    :root[data-theme="relay-light"] body.lang-en .lang-en,
+    :root[data-theme="relay-light"] body.lang-vi .lang-vi {
+      color: var(--brand-primary);
+    }
+
+    :root[data-theme="relay-light"] .nav-hamburger span {
+      background: var(--brand-primary);
+    }
+
+    :root[data-theme="relay-light"] .nav-mobile {
+      background: var(--color-surface);
+    }
+
+    :root[data-theme="relay-light"] .nav-mobile a,
+    :root[data-theme="relay-light"] .nav-mobile-toggle,
+    :root[data-theme="relay-light"] .nav-mobile-close {
+      color: var(--color-text);
+    }
+
+    :root[data-theme="relay-light"] .nav-mobile a:hover,
+    :root[data-theme="relay-light"] .nav-mobile-toggle:hover {
+      background: var(--color-surface-blue);
+    }
+
+    :root[data-theme="relay-light"] .nav-mobile-submenu {
+      background: var(--color-surface-pink);
+    }
+
+    :root[data-theme="relay-light"] .hero {
+      background: var(--hero-background);
+    }
+
+    :root[data-theme="relay-light"] .hero-circle-1 {
+      background: radial-gradient(circle, color-mix(in srgb, var(--brand-accent) 18%, transparent) 0%, transparent 70%);
+    }
+
+    :root[data-theme="relay-light"] .hero-circle-2 {
+      background: radial-gradient(circle, color-mix(in srgb, var(--brand-primary) 16%, transparent) 0%, transparent 70%);
+    }
+
+    :root[data-theme="relay-light"] .hero-circle-3 {
+      background: radial-gradient(circle, color-mix(in srgb, var(--brand-accent) 12%, transparent) 0%, transparent 70%);
+    }
+
+    :root[data-theme="relay-light"] .hero-petal {
+      background: color-mix(in srgb, var(--brand-accent) 16%, transparent);
+    }
+
+    :root[data-theme="relay-light"] .hero-lotus {
+      fill: var(--brand-primary);
+      opacity: .055;
+    }
+
+    :root[data-theme="relay-light"] .hero h1,
+    :root[data-theme="relay-light"] .hero-stat-num {
+      color: var(--color-text);
+    }
+
+    :root[data-theme="relay-light"] .hero-eyebrow-text {
+      color: var(--brand-primary);
+    }
+
+    :root[data-theme="relay-light"] .hero-sub {
+      color: var(--color-text-muted);
+    }
+
+    :root[data-theme="relay-light"] .hero-stats {
+      border-top-color: var(--color-border);
+    }
+
+    :root[data-theme="relay-light"] .hero-stat-label {
+      color: var(--color-text-muted);
+    }
+
+    :root[data-theme="relay-light"] .hero .btn--outline-white {
+      color: var(--brand-primary);
+      border-color: var(--brand-primary);
+      background: var(--color-surface);
+    }
+
+    :root[data-theme="relay-light"] .hero .btn--outline-white:hover {
+      color: var(--color-on-brand);
+      background: var(--brand-primary);
+    }
+
+    :root[data-theme="relay-light"] #about,
+    :root[data-theme="relay-light"] #stories,
+    :root[data-theme="relay-light"] #contact {
+      background: var(--color-surface);
+    }
+
+    :root[data-theme="relay-light"] #sen-hong {
+      background: var(--color-surface-pink);
+    }
+
+    :root[data-theme="relay-light"] #involved {
+      background: var(--color-surface-blue);
+    }
+
+    :root[data-theme="relay-light"] .impact-section {
+      background: var(--color-surface-blue);
+      color: var(--color-text);
+    }
+
+    :root[data-theme="relay-light"] .impact-section::before {
+      opacity: .25;
+    }
+
+    :root[data-theme="relay-light"] .badge--white {
+      color: var(--brand-primary);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+
+    :root[data-theme="relay-light"] .impact-header h2,
+    :root[data-theme="relay-light"] .impact-card h3 {
+      color: var(--color-text);
+    }
+
+    :root[data-theme="relay-light"] .impact-card {
+      background: var(--color-surface);
+      border-color: var(--color-border);
+      box-shadow: var(--shadow);
+    }
+
+    :root[data-theme="relay-light"] .impact-card:hover {
+      background: var(--color-surface-pink);
+    }
+
+    :root[data-theme="relay-light"] .impact-card p,
+    :root[data-theme="relay-light"] .about-impact-closing {
+      color: var(--color-text-muted);
+    }
+
+    :root[data-theme="relay-light"] .involved-card--pink {
+      color: var(--color-text);
+      background: var(--color-surface-pink);
+      border: 1px solid color-mix(in srgb, var(--brand-accent) 22%, var(--color-border));
+    }
+
+    :root[data-theme="relay-light"] .involved-card--blue {
+      color: var(--color-text);
+      background: var(--color-surface-blue);
+      border: 1px solid var(--color-border);
+    }
+
+    :root[data-theme="relay-light"] .involved-card--pink p,
+    :root[data-theme="relay-light"] .involved-card--blue p {
+      color: var(--color-text-muted);
+      opacity: 1;
+    }
+
+    :root[data-theme="relay-light"] .involved-card--pink .involved-icon {
+      background: color-mix(in srgb, var(--brand-accent) 14%, var(--color-surface));
+    }
+
+    :root[data-theme="relay-light"] .involved-card--blue .involved-icon {
+      background: color-mix(in srgb, var(--brand-primary) 12%, var(--color-surface));
+    }
+
+    :root[data-theme="relay-light"] .involved-card--pink .involved-icon svg {
+      stroke: var(--brand-accent);
+    }
+
+    :root[data-theme="relay-light"] .involved-card--blue .involved-icon svg {
+      stroke: var(--brand-primary);
+    }
+
+    :root[data-theme="relay-light"] .involved-card--pink .involved-bg-deco {
+      fill: var(--brand-accent);
+    }
+
+    :root[data-theme="relay-light"] .involved-card--blue .involved-bg-deco {
+      fill: var(--brand-primary);
+    }
+
+    :root[data-theme="relay-light"] .involved-card--pink .btn--outline-white {
+      color: var(--color-on-brand);
+      background: var(--brand-accent);
+      border-color: var(--brand-accent);
+    }
+
+    :root[data-theme="relay-light"] .involved-card--blue .btn--outline-white {
+      color: var(--color-on-brand);
+      background: var(--brand-primary);
+      border-color: var(--brand-primary);
+    }
+
+    :root[data-theme="relay-light"] .contact-info {
+      background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-blue) 55%, var(--color-surface-pink) 100%);
+      border-color: var(--color-border);
+      box-shadow: var(--shadow-lg);
+    }
+
+    :root[data-theme="relay-light"] .contact-info::before {
+      background: radial-gradient(circle, color-mix(in srgb, var(--brand-accent) 15%, transparent) 0%, transparent 70%);
+    }
+
+    :root[data-theme="relay-light"] .footer {
+      background: var(--footer-background);
+    }
+
+    :root[data-theme="relay-light"] .btt-btn {
+      background: var(--brand-primary);
+      box-shadow: var(--shadow-lg);
+    }
+
     /* ===== ANIMATIONS ===== */
     .fade-up {
       opacity: 0;
       transform: translateY(32px);
       transition: opacity .6s ease, transform .6s ease;
     }
-    .fade-up.visible { opacity: 1; transform: none; }
-    .fade-up:nth-child(2) { transition-delay: .1s; }
-    .fade-up:nth-child(3) { transition-delay: .2s; }
-    .fade-up:nth-child(4) { transition-delay: .3s; }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .fade-up:nth-child(2) {
+      transition-delay: .1s;
+    }
+
+    .fade-up:nth-child(3) {
+      transition-delay: .2s;
+    }
+
+    .fade-up:nth-child(4) {
+      transition-delay: .3s;
+    }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
-      .impact-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-top { grid-template-columns: 1fr 1fr; }
+      .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
     }
+
     @media (max-width: 768px) {
-      .section { padding: 64px 0; }
-      .nav-links, .nav-cta .btn--outline-white { display: none; }
-      .nav-hamburger { display: flex; }
-      .hero h1 { font-size: 2.2rem; }
-      .hero-stats { gap: 24px; }
-      .hero-lotus { display: none; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-photo-small { right: -8px; width: 110px; height: 110px; bottom: 44px; }
-      .about-quote-card { left: 8px; bottom: -16px; max-width: 200px; padding: 14px 16px; }
-      .program-card { grid-template-columns: 1fr; }
-      .stories-grid { grid-template-columns: 1fr; }
-      .involved-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .form-row { grid-template-columns: 1fr; }
-      .about-pillars { grid-template-columns: 1fr; }
-      .stories-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      .impact-grid { grid-template-columns: repeat(2, 1fr); }
+      .section {
+        padding: 64px 0;
+      }
+
+      .nav-links,
+      .nav-cta .btn {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content {
+        padding: 56px 0 64px;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        gap: 24px;
+      }
+
+      .hero-lotus {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo-small {
+        right: -8px;
+        width: 110px;
+        height: 110px;
+        bottom: 44px;
+      }
+
+      .program-card {
+        grid-template-columns: 1fr;
+      }
+
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .involved-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .stories-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-impact-grid,
+      .contact-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-mobile {
+        justify-content: flex-start;
+        overflow-y: auto;
+        padding: 84px 20px 36px;
+      }
+
+      .story-dialog-panel {
+        padding: 32px 24px;
+      }
     }
+
     @media (max-width: 480px) {
-      .impact-grid { grid-template-columns: 1fr 1fr; }
-      .hero-actions { flex-direction: column; }
-      .hero-actions .btn { text-align: center; justify-content: center; }
-      .footer-top { grid-template-columns: 1fr; }
+      .impact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-impact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        width: 100%;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- ===== NAV ===== -->
@@ -1209,10 +2384,18 @@
           <img src="assets/2467d23d-1bb7-41fb-ac7c-a50b584a29f5.png" alt="The Relay Fund">
         </a>
         <ul class="nav-links">
-          <li><a href="#about" data-id="nav-about">Về chúng tôi</a></li>
-          <li><a href="#programs" data-id="nav-programs">Học bổng</a></li>
-          <li><a href="#impact" data-id="nav-impact">Tác động</a></li>
+          <li><a href="#about" data-id="nav-about">Giới thiệu chung</a></li>
+          <li class="nav-item has-submenu">
+            <button type="button" class="nav-link-toggle" data-id="nav-programs" aria-expanded="false"
+              aria-controls="programsSubmenu">Chương trình</button>
+            <div class="nav-submenu" id="programsSubmenu">
+              <a href="#sen-hong" class="nav-submenu-link" data-id="nav-scholarship">Học bổng Sen Hồng</a>
+              <a class="nav-submenu-link config-link config-link--pending" data-link-key="riceProgram"
+                data-id="nav-rice">Chương trình Gạo yêu thương (Đang cập nhật)</a>
+            </div>
+          </li>
           <li><a href="#stories" data-id="nav-stories">Câu chuyện</a></li>
+          <li><a class="config-link config-link--pending" data-link-key="news" data-id="nav-news">Tin tức</a></li>
           <li><a href="#contact" data-id="nav-contact">Liên hệ</a></li>
         </ul>
         <div class="nav-cta">
@@ -1221,10 +2404,11 @@
             <span class="lang-sep">|</span>
             <span class="lang-en">EN</span>
           </button>
-          <a href="#contact" class="btn btn--pink" style="padding:10px 20px;font-size:.82rem;" data-vi="Ứng tuyển" data-en="Apply">Ứng tuyển</a>
-          <a href="#involved" class="btn btn--outline-white" style="padding:10px 20px;font-size:.82rem;" data-vi="Tình nguyện" data-en="Volunteer">Tình nguyện</a>
+          <a class="btn btn--pink config-link" data-link-key="scholarshipApplication"
+            style="padding:10px 20px;font-size:.82rem;" data-id="nav-apply">Ứng tuyển</a>
         </div>
-        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu">
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu"
+          data-aria-vi="Mở menu" data-aria-en="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -1233,17 +2417,21 @@
 
   <!-- Mobile nav overlay -->
   <nav class="nav-mobile" id="navMobile">
-    <button class="nav-mobile-close" id="navClose">✕</button>
-    <a href="#about" class="nav-mobile-link">Về chúng tôi</a>
-    <a href="#programs" class="nav-mobile-link">Học bổng</a>
-    <a href="#impact" class="nav-mobile-link">Tác động</a>
-    <a href="#stories" class="nav-mobile-link">Câu chuyện</a>
-    <a href="#involved" class="nav-mobile-link">Tham gia</a>
-    <a href="#contact" class="nav-mobile-link">Liên hệ</a>
-    <div style="margin-top:24px;display:flex;gap:12px;">
-      <a href="#contact" class="btn btn--outline-white">Ứng tuyển</a>
-      <a href="#involved" class="btn btn--pink">Ủng hộ</a>
+    <button class="nav-mobile-close" id="navClose" aria-label="Đóng menu"
+      data-aria-vi="Đóng menu" data-aria-en="Close menu">✕</button>
+    <a href="#about" class="nav-mobile-link" data-id="nav-about">Giới thiệu chung</a>
+    <button type="button" class="nav-mobile-toggle" id="mobileProgramsToggle" aria-expanded="false"
+      aria-controls="mobileProgramsSubmenu" data-id="nav-programs">Chương trình</button>
+    <div class="nav-mobile-submenu" id="mobileProgramsSubmenu">
+      <a href="#sen-hong" class="nav-mobile-link" data-id="nav-scholarship">Học bổng Sen Hồng</a>
+      <a class="nav-mobile-link config-link config-link--pending" data-link-key="riceProgram"
+        data-id="nav-rice">Chương trình Gạo yêu thương (Đang cập nhật)</a>
     </div>
+    <a href="#stories" class="nav-mobile-link" data-id="nav-stories">Câu chuyện</a>
+    <a class="nav-mobile-link config-link config-link--pending" data-link-key="news" data-id="nav-news">Tin tức</a>
+    <a href="#contact" class="nav-mobile-link" data-id="nav-contact">Liên hệ</a>
+    <a class="btn btn--pink config-link nav-mobile-apply" data-link-key="scholarshipApplication"
+      data-id="nav-apply">Ứng tuyển</a>
   </nav>
 
   <!-- ===== HERO ===== -->
@@ -1273,119 +2461,104 @@
       <div class="hero-content">
         <div class="hero-eyebrow">
           <div class="hero-eyebrow-line"></div>
-          <span class="hero-eyebrow-text" data-id="hero-eyebrow">Học bổng dành riêng cho nữ sinh Việt Nam</span>
+          <span class="hero-eyebrow-text" data-id="hero-eyebrow">Đồng hành cùng nữ sinh Việt Nam</span>
         </div>
         <h1 data-id="hero-h1">
           Nâng đỡ ước mơ.<br>
           Tiếp sức <em>nữ sinh.</em>
         </h1>
         <p class="hero-sub" data-id="hero-sub">
-          Relay Fund – Học bổng Sen Hồng đồng hành cùng những nữ sinh tài năng, nghị lực vượt khó — để không một cô gái nào phải từ bỏ ước mơ vì thiếu điều kiện.
+          Mỗi nữ sinh đều có những ước mơ cho riêng mình. The Relay Fund được tạo nên để những ước mơ ấy không phải dừng
+          lại vì hoàn cảnh khó khăn. Chúng tôi kết nối sự sẻ chia từ cộng đồng để mang đến cơ hội học tập và động lực
+          vươn lên cho các em.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn--pink">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 6v6l4 2"></path></svg>
+          <a class="btn btn--pink config-link" data-link-key="scholarshipApplication">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 6v6l4 2"></path>
+            </svg>
             <span data-id="btn-apply">Ứng tuyển học bổng</span>
           </a>
           <a href="#involved" class="btn btn--outline-white">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            <span data-id="btn-volunteer">Tham gia tình nguyện</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span data-id="btn-involved">Đồng hành cùng chúng tôi</span>
           </a>
           <a href="#about" class="btn btn--outline-white" data-id="btn-learn">Tìm hiểu thêm</a>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-num"><span class="count" data-target="150">0</span><span>+</span></div>
-            <div class="hero-stat-label" data-id="stat-1-label">Sinh viên nhận học bổng</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num"><span class="count" data-target="5">0</span></div>
-            <div class="hero-stat-label" data-id="stat-2-label">Năm hoạt động</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num"><span class="count" data-target="80">0</span><span>+</span></div>
-            <div class="hero-stat-label" data-id="stat-3-label">Nhà tài trợ &amp; đối tác</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num"><span class="count" data-target="3">0</span><span>.5 tỷ</span></div>
-            <div class="hero-stat-label" data-id="stat-4-label">Đồng đã trao</div>
-          </div>
-        </div>
+        <div class="hero-stats" id="heroStats" aria-label="Số liệu tác động tạm thời"></div>
       </div>
     </div>
   </section>
-
-  <!-- ===== TRUST BAR ===== -->
-  <div class="trust-bar">
-    <div class="container">
-      <div class="trust-bar-inner">
-        <span class="trust-label">Được tin tưởng bởi</span>
-        <div class="trust-partners">
-          <div class="trust-partner-chip"><div class="trust-partner-dot"></div> Nhà tài trợ cá nhân</div>
-          <div class="trust-partner-chip"><div class="trust-partner-dot" style="background:var(--pink)"></div> Đối tác doanh nghiệp</div>
-          <div class="trust-partner-chip"><div class="trust-partner-dot" style="background:#10B981"></div> Tổ chức giáo dục</div>
-          <div class="trust-partner-chip"><div class="trust-partner-dot" style="background:#F59E0B"></div> Cộng đồng quốc tế</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ===== ABOUT ===== -->
   <section class="section" id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-visual">
-          <div class="about-activity-badge">
-            <span class="dot"></span>
-            Ảnh hoạt động thực tế
-          </div>
           <div class="about-photo-main">
-            <img src="assets/d3d89bd8-819f-4b95-a8b3-a4a7245d4a07.jpg" alt="Sinh viên Học bổng Sen Hồng" loading="lazy" onerror="this.onerror=null;this.src='https://picsum.photos/seed/students/600/750'">
-          </div>
-          <div class="about-photo-small">
-            <img src="assets/2a45cd01-e405-444a-9f19-fa497803863b.jpg" alt="Lễ trao học bổng" loading="lazy" onerror="this.onerror=null;this.src='https://picsum.photos/seed/senhong/300/300'">
-          </div>
-          <div class="about-quote-card">
-            <p>"Học bổng không chỉ là tiền — đó là niềm tin rằng tôi có thể làm được."</p>
-            <div class="aq-author">— Nguyễn Thị Lan, SV ĐH Bách Khoa TP.HCM</div>
+            <img src="assets/d3d89bd8-819f-4b95-a8b3-a4a7245d4a07.jpg"
+              alt="Ảnh minh họa tạm thời cho hoạt động của The Relay Fund"
+              data-alt-vi="Ảnh minh họa tạm thời cho hoạt động của The Relay Fund"
+              data-alt-en="Temporary illustration of The Relay Fund's work" loading="lazy">
           </div>
         </div>
 
         <div class="about-text fade-up">
           <div class="section-label">
-            <span class="badge badge--pink" data-id="about-badge">Về chúng tôi / About Us</span>
+            <span class="badge badge--pink" data-id="about-badge">Giới thiệu chung / About Us</span>
           </div>
           <h2 data-id="about-h2">Chúng tôi là <span class="text-pink">ai?</span></h2>
-          <p data-id="about-p1">The Relay Fund – Học bổng Sen Hồng được thành lập với một niềm tin đơn giản: <strong>mọi sinh viên tài năng đều xứng đáng có cơ hội</strong>, bất kể hoàn cảnh xuất phát điểm.</p>
-          <p data-id="about-p2">Chúng tôi kết nối những nhà tài trợ giàu tâm huyết với những sinh viên đang cần được tiếp sức — để tạo nên một chuỗi truyền lửa không ngừng cho thế hệ tương lai Việt Nam.</p>
+          <p data-id="about-p1">The Relay Fund là một doanh nghiệp xã hội (MST: 0317235089) được thành lập với mong
+            muốn kết nối những nhà tài trợ giàu tâm huyết với các nữ sinh có hoàn cảnh khó khăn nhưng giàu nghị lực,
+            giúp các em có thêm cơ hội theo đuổi việc học và những ước mơ của mình.</p>
+          <p data-id="about-p2">Chúng tôi tin rằng hoàn cảnh không nên là rào cản khiến một em gái phải từ bỏ tương lai
+            mà em mong muốn. Thông qua hỗ trợ vật chất, các chương trình phát triển kỹ năng và sự đồng hành từ cộng
+            đồng, The Relay Fund giúp các em có thêm điểm tựa để vững bước trên hành trình học tập và trưởng thành.</p>
           <div class="about-pillars">
             <div class="pillar-card">
               <div class="pillar-icon pillar-icon--pink">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8297C" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
               </div>
-              <h4>Sứ mệnh</h4>
-              <p>Trao cơ hội học tập bình đẳng cho sinh viên có hoàn cảnh khó khăn, truyền lửa và kết nối cộng đồng.</p>
+              <h4 data-id="mission-title">Sứ mệnh</h4>
+              <p data-id="mission-copy">Trao cơ hội học tập và đồng hành cùng nữ sinh trên hành trình trưởng thành bằng
+                tri thức.</p>
             </div>
             <div class="pillar-card">
               <div class="pillar-icon pillar-icon--blue">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B50BE" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
               </div>
-              <h4>Tầm nhìn</h4>
-              <p>Xây dựng một thế hệ lãnh đạo trẻ Việt Nam vượt khó, có bản lĩnh và khát vọng cống hiến.</p>
+              <h4 data-id="vision-title">Tầm nhìn</h4>
+              <p data-id="vision-copy">Góp phần xây dựng một Việt Nam nơi các nữ sinh có hoàn cảnh khó khăn được tiếp
+                cận cơ hội học tập và phát triển.</p>
             </div>
             <div class="pillar-card">
               <div class="pillar-icon pillar-icon--pink">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8297C" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
               </div>
-              <h4>Minh bạch</h4>
-              <p>Mọi nguồn tài trợ được quản lý công khai, báo cáo định kỳ và trách nhiệm với từng nhà tài trợ.</p>
+              <h4 data-id="transparency-title">Minh bạch</h4>
+              <p data-id="transparency-copy">Mọi khoản tài trợ được quản lý công khai, báo cáo định kỳ và sử dụng đúng
+                mục đích.</p>
             </div>
-            <div class="pillar-card">
-              <div class="pillar-icon pillar-icon--blue">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B50BE" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-              </div>
-              <h4>Tác động thực</h4>
-              <p>Chúng tôi theo dõi hành trình từng sinh viên — từ khi nhận học bổng đến khi tốt nghiệp và đi làm.</p>
+            <div class="pillar-image-card">
+            <img src="assets/2a45cd01-e405-444a-9f19-fa497803863b.jpg"
+                alt="Ảnh minh họa tạm thời, sẽ được thay bằng ảnh lễ trao học bổng"
+                data-alt-vi="Ảnh minh họa tạm thời, sẽ được thay bằng ảnh lễ trao học bổng"
+                data-alt-en="Temporary illustration to be replaced with a scholarship ceremony photo" loading="lazy">
             </div>
           </div>
         </div>
@@ -1393,51 +2566,58 @@
     </div>
   </section>
 
-  <!-- ===== IMPACT ===== -->
-  <section class="section impact-section" id="impact">
+  <!-- ===== ABOUT: WHY GIRLS' EDUCATION ===== -->
+  <section class="section impact-section" id="about-why">
     <div class="container" style="position:relative;z-index:1;">
       <div class="impact-header fade-up">
         <div class="section-label" style="justify-content:center;margin-bottom:14px;">
-          <span class="badge badge--white" data-id="impact-badge">Tác động / Impact</span>
+          <span class="badge badge--white" data-id="about-why-badge">Giới thiệu chung / About Us</span>
         </div>
-        <h2 data-id="impact-h2">Những con số <span style="color:var(--pink-soft);">biết nói</span></h2>
-        <p data-id="impact-sub">Mỗi con số là một cuộc đời được thay đổi, một ước mơ được nâng đỡ.</p>
+        <h2 data-id="about-why-h2">Vì sao đầu tư vào <span style="color:var(--pink-soft);">giáo dục nữ sinh?</span></h2>
       </div>
-      <div class="impact-grid">
+      <div class="impact-grid about-impact-grid">
         <div class="impact-card fade-up">
-          <div class="impact-card-num"><span class="count" data-target="150">0</span><em>+</em></div>
-          <div class="impact-card-label" data-id="ic-1">Sinh viên nhận học bổng</div>
+          <div class="impact-card-icon" aria-hidden="true">💼</div>
+          <h3 data-id="about-why-title-1">Mở ra cơ hội nghề nghiệp</h3>
+          <p data-id="about-why-copy-1">Mỗi năm học thêm có thể giúp tăng thu nhập trung bình khoảng 10% trong tương
+            lai.</p>
         </div>
         <div class="impact-card fade-up">
-          <div class="impact-card-num"><span class="count" data-target="95">0</span><em>%</em></div>
-          <div class="impact-card-label" data-id="ic-2">Tốt nghiệp đúng hạn</div>
+          <div class="impact-card-icon" aria-hidden="true">👨‍👩‍👧</div>
+          <h3 data-id="about-why-title-2">Tác động đến gia đình</h3>
+          <p data-id="about-why-copy-2">Trình độ học vấn của người mẹ có ảnh hưởng tích cực đến sức khỏe và cơ hội
+            phát triển của con cái.</p>
         </div>
         <div class="impact-card fade-up">
-          <div class="impact-card-num"><span class="count" data-target="30">0</span><em>+</em></div>
-          <div class="impact-card-label" data-id="ic-3">Tỉnh thành trong cả nước</div>
-        </div>
-        <div class="impact-card fade-up">
-          <div class="impact-card-num"><span class="count" data-target="80">0</span><em>+</em></div>
-          <div class="impact-card-label" data-id="ic-4">Nhà tài trợ &amp; đối tác</div>
+          <div class="impact-card-icon" aria-hidden="true">🌱</div>
+          <h3 data-id="about-why-title-3">Lan tỏa đến cộng đồng</h3>
+          <p data-id="about-why-copy-3">Đầu tư vào giáo dục phụ nữ được xem là một trong những khoản đầu tư mang lại
+            hiệu quả kinh tế và xã hội cao nhất.</p>
         </div>
       </div>
+      <p class="about-impact-closing fade-up" data-id="about-why-closing">Một cơ hội được trao hôm nay không chỉ giúp
+        thay đổi cuộc đời của một nữ sinh mà còn tạo ra những tác động tích cực cho gia đình, cộng đồng và thế hệ tiếp
+        theo.</p>
     </div>
   </section>
 
   <!-- ===== PROGRAMS ===== -->
-  <section class="section section--cream" id="programs">
+  <section class="section section--cream" id="sen-hong">
     <div class="container">
       <div class="programs-header fade-up">
         <div class="section-label" style="justify-content:center;margin-bottom:14px;">
           <span class="badge badge--pink" data-id="prog-badge">Chương trình / Programs</span>
         </div>
         <h2 data-id="prog-h2">Học bổng <span class="text-pink">Sen Hồng</span></h2>
-        <p data-id="prog-sub">Chương trình học bổng dành riêng cho nữ sinh Việt Nam có hoàn cảnh khó khăn — không chỉ hỗ trợ tài chính, mà còn đồng hành toàn diện trong suốt hành trình học tập.</p>
+        <p class="programs-kicker" data-id="prog-kicker">Đồng hành cùng nữ sinh trên hành trình đại học</p>
+        <p data-id="prog-sub">Học bổng Sen Hồng dành cho nữ sinh Việt Nam có hoàn cảnh khó khăn nhưng giàu nghị lực
+          và khát vọng vươn lên. Không chỉ hỗ trợ tài chính, chương trình còn đồng hành cùng học viên trong suốt hành
+          trình đại học thông qua các hoạt động phát triển kỹ năng, định hướng nghề nghiệp và kết nối cộng đồng.</p>
       </div>
       <div class="program-card fade-up">
         <div class="program-visual">
           <div class="prog-title">
-            <div class="prog-name">Học bổng<br>Sen Hồng</div>
+            <div class="prog-name" data-id="program-card-name">Học bổng<br>Sen Hồng</div>
             <div class="prog-en">Pink Lotus Scholarship</div>
           </div>
           <!-- Lotus bg decoration -->
@@ -1450,53 +2630,69 @@
             <ellipse cx="140" cy="218" rx="62" ry="12"></ellipse>
           </svg>
           <div class="prog-stat">
-            <div class="prog-stat-num">20 tr.</div>
-            <div class="prog-stat-label">giá trị mỗi suất học bổng / năm</div>
+            <div class="prog-stat-num" data-id="scholarship-value">Từ 10 triệu đồng/năm</div>
+            <div class="prog-stat-label" data-id="scholarship-support">Hỗ trợ đến khi tốt nghiệp, cùng các cơ hội học
+              tập, phát triển kỹ năng và kết nối nghề nghiệp</div>
           </div>
         </div>
         <div class="program-details">
-          <h3>Điều kiện &amp; Quy trình ứng tuyển</h3>
+          <h3 data-id="program-details-title">Điều kiện &amp; Quy trình ứng tuyển</h3>
           <div class="prog-detail-group">
-            <h4>Đối tượng</h4>
+            <h4 data-id="eligibility-title">Đối tượng</h4>
             <div class="prog-tags">
-              <span class="prog-tag" style="background:var(--pink-pale);color:var(--pink);font-weight:700;">Dành cho Nữ sinh</span>
-              <span class="prog-tag">Sinh viên năm 1–4</span>
-              <span class="prog-tag">Hoàn cảnh khó khăn</span>
-              <span class="prog-tag">GPA ≥ 2.5/4.0</span>
-              <span class="prog-tag">Đang học tại Việt Nam</span>
+              <span class="prog-tag" data-id="eligibility-1">Nữ sinh đại học hoặc cao đẳng chính quy tại Việt Nam</span>
+              <span class="prog-tag" data-id="eligibility-2">Có hoàn cảnh khó khăn về kinh tế</span>
+              <span class="prog-tag" data-id="eligibility-3">Có ý chí học tập, tinh thần cầu tiến và khát vọng phát
+                triển bản thân</span>
+              <span class="prog-tag" data-id="eligibility-4">Tích cực tham gia hoặc mong muốn đóng góp cho cộng
+                đồng</span>
             </div>
           </div>
           <div class="prog-detail-group">
-            <h4>Tiêu chí xét duyệt</h4>
+            <h4 data-id="criteria-title">Tiêu chí xét tuyển</h4>
             <div class="prog-tags">
-              <span class="prog-tag">Nghị lực vượt khó</span>
-              <span class="prog-tag">Kết quả học tập</span>
-              <span class="prog-tag">Hoạt động xã hội</span>
-              <span class="prog-tag">Định hướng tương lai</span>
+              <span class="prog-tag" data-id="criteria-1">Nghị lực vượt khó</span>
+              <span class="prog-tag" data-id="criteria-2">Thành tích và tinh thần học tập</span>
+              <span class="prog-tag" data-id="criteria-3">Tiềm năng phát triển trong tương lai</span>
+              <span class="prog-tag" data-id="criteria-4">Khả năng tạo tác động tích cực cho cộng đồng</span>
+            </div>
+            <div class="prog-detail-group" style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
+              <h4 style="font-size:.95rem;margin-bottom:10px;" data-id="fields-title">Ngành học ưu tiên</h4>
+              <div class="prog-tags">
+                <span class="prog-tag" data-id="field-1">Y Dược</span>
+                <span class="prog-tag" data-id="field-2">Sư phạm</span>
+                <span class="prog-tag" data-id="field-3">Kỹ thuật</span>
+                <span class="prog-tag" data-id="field-4">Khoa học Tự nhiên</span>
+                <span class="prog-tag" data-id="field-5">Môi trường</span>
+                <span class="prog-tag" data-id="field-6">Lĩnh vực tạo tác động tích cực cho cộng đồng</span>
+              </div>
+              <p class="prog-note" data-id="field-note">Học bổng không giới hạn ngành học và khuyến khích ứng tuyển
+                từ mọi lĩnh vực đào tạo.</p>
             </div>
           </div>
           <div class="prog-detail-group">
-            <h4>Quy trình ứng tuyển</h4>
+            <h4 data-id="process-title">Quy trình ứng tuyển</h4>
             <div class="prog-steps">
               <div class="prog-step">
                 <div class="prog-step-num">1</div>
-                <p><strong>Nộp hồ sơ online</strong> — điền form, đính kèm tài liệu cần thiết trong thời gian tuyển sinh.</p>
+                <p data-id="process-1"><strong>Nộp hồ sơ trực tuyến</strong></p>
               </div>
               <div class="prog-step">
                 <div class="prog-step-num">2</div>
-                <p><strong>Xét duyệt hồ sơ</strong> — hội đồng xét học bổng thẩm định trong vòng 3 tuần.</p>
+                <p data-id="process-2"><strong>Đánh giá hồ sơ</strong></p>
               </div>
               <div class="prog-step">
                 <div class="prog-step-num">3</div>
-                <p><strong>Phỏng vấn</strong> — ứng viên tiềm năng được mời trao đổi trực tiếp hoặc online.</p>
+                <p data-id="process-3"><strong>Phỏng vấn</strong></p>
               </div>
               <div class="prog-step">
                 <div class="prog-step-num">4</div>
-                <p><strong>Thông báo kết quả</strong> — công bố danh sách và tiến hành trao học bổng.</p>
+                <p data-id="process-4"><strong>Công bố kết quả</strong></p>
               </div>
             </div>
           </div>
-          <a href="#contact" class="btn btn--pink">Ứng tuyển ngay</a>
+          <a class="btn btn--pink config-link" data-link-key="scholarshipApplication" data-id="apply-now">Ứng tuyển
+            ngay</a>
         </div>
       </div>
     </div>
@@ -1510,70 +2706,85 @@
           <div class="section-label" style="margin-bottom:14px;">
             <span class="badge badge--blue" data-id="stories-badge">Câu chuyện / Stories</span>
           </div>
-          <h2 data-id="stories-h2">Tiếng lòng của <span class="text-pink">người được trao</span></h2>
+          <h2 data-id="stories-h2">Những hành trình <span class="text-pink">được tiếp sức</span></h2>
+          <p class="stories-intro" data-id="stories-intro">Mỗi nữ sinh Sen Hồng đều mang theo một câu chuyện riêng về
+            nghị lực, khát vọng và hành trình vượt khó. Nhờ học bổng và sự đồng hành của cộng đồng, các em có thêm cơ
+            hội tiếp tục việc học, phát triển bản thân và từng bước hiện thực hóa ước mơ của mình.</p>
         </div>
-        <a href="#contact" class="btn btn--outline-blue">Chia sẻ câu chuyện của bạn</a>
       </div>
       <div class="stories-grid">
-        <div class="story-card fade-up">
+        <article class="story-card fade-up">
           <div class="story-quote-mark">"</div>
-          <p class="story-text">Học bổng Sen Hồng không chỉ giúp tôi trả học phí — nó cho tôi thấy có những người tin tưởng vào tôi. Điều đó tiếp thêm động lực để tôi không bỏ cuộc dù khó khăn đến đâu.</p>
+          <p class="story-text" data-story-field="excerpt" data-story-id="story-1">Học bổng giúp em tiếp tục việc học
+            và tin rằng hoàn cảnh không quyết định tương lai của mình.</p>
           <div class="story-author">
             <div class="story-avatar" style="background:var(--blue);">L</div>
             <div>
-              <div class="story-author-name">Lê Văn Minh</div>
-              <div class="story-author-meta">Sinh viên Kỹ thuật, ĐH Bách Khoa HN · Khoá 2022</div>
+              <div class="story-author-name" data-story-field="name" data-story-id="story-1">Lan</div>
+              <div class="story-author-meta" data-story-field="meta" data-story-id="story-1">Câu chuyện minh họa · Nội
+                dung sẽ cập nhật</div>
             </div>
           </div>
-        </div>
-        <div class="story-card fade-up">
+          <button type="button" class="story-open" data-story-open="story-1" data-id="story-read">Đọc câu chuyện
+            →</button>
+        </article>
+        <article class="story-card fade-up">
           <div class="story-quote-mark">"</div>
-          <p class="story-text">Tôi đến từ một gia đình nông dân nghèo ở Nghệ An. Nếu không có Relay Fund, có lẽ tôi đã không thể học đại học. Bây giờ tôi sắp tốt nghiệp và muốn trở thành cầu nối cho các em sau này.</p>
+          <p class="story-text" data-story-field="excerpt" data-story-id="story-2">Sự đồng hành của cộng đồng cho em
+            thêm động lực vượt qua những năm tháng khó khăn nhất.</p>
           <div class="story-author">
             <div class="story-avatar" style="background:var(--pink);">N</div>
             <div>
-              <div class="story-author-name">Nguyễn Thị Thu Hà</div>
-              <div class="story-author-meta">Sinh viên Kinh tế, ĐH Kinh tế Quốc dân · Khoá 2021</div>
+              <div class="story-author-name" data-story-field="name" data-story-id="story-2">Ngân</div>
+              <div class="story-author-meta" data-story-field="meta" data-story-id="story-2">Câu chuyện minh họa · Nội
+                dung sẽ cập nhật</div>
             </div>
           </div>
-        </div>
-        <div class="story-card fade-up">
+          <button type="button" class="story-open" data-story-open="story-2" data-id="story-read">Đọc câu chuyện
+            →</button>
+        </article>
+        <article class="story-card fade-up">
           <div class="story-quote-mark">"</div>
-          <p class="story-text">Tôi ấn tượng nhất là sự đồng hành — không chỉ tiền mà còn có mentorship, kết nối việc làm, và một cộng đồng ấm áp. Đó là điều khiến Relay Fund khác biệt.</p>
+          <p class="story-text" data-story-field="excerpt" data-story-id="story-3">Không chỉ là hỗ trợ tài chính, Sen
+            Hồng còn mở ra cho em một cộng đồng học hỏi và sẻ chia.</p>
           <div class="story-author">
-            <div class="story-avatar" style="background:#10B981;">P</div>
+            <div class="story-avatar" style="background:var(--color-success);">P</div>
             <div>
-              <div class="story-author-name">Phạm Thị Lan Anh</div>
-              <div class="story-author-meta">Cựu sinh viên, Đang làm tại TP.HCM · Khoá 2019</div>
+              <div class="story-author-name" data-story-field="name" data-story-id="story-3">Phương</div>
+              <div class="story-author-meta" data-story-field="meta" data-story-id="story-3">Câu chuyện minh họa · Nội
+                dung sẽ cập nhật</div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- Donor testimonials -->
-      <div style="margin-top:48px;padding:40px;background:var(--cream);border-radius:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px;" class="fade-up">
-        <div>
-          <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:16px;">Nhà tài trợ nói gì</div>
-          <p style="font-size:1rem;font-weight:600;line-height:1.65;color:var(--text);">"Tôi tài trợ vì tôi tin vào sự minh bạch và cách Relay Fund kể câu chuyện của từng sinh viên. Tôi biết tiền của mình đi đến đúng chỗ."</p>
-          <div style="margin-top:14px;font-size:.82rem;color:var(--muted);">— Anh Trần Đức Thịnh, Nhà tài trợ cá nhân từ năm 2021</div>
-        </div>
-        <div style="border-left:1px solid var(--border);padding-left:24px;">
-          <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:16px;">Đối tác chia sẻ</div>
-          <p style="font-size:1rem;font-weight:600;line-height:1.65;color:var(--text);">"Đây là tổ chức trẻ nhưng làm việc rất chuyên nghiệp. Chúng tôi tự hào khi là đối tác giáo dục của Relay Fund."</p>
-          <div style="margin-top:14px;font-size:.82rem;color:var(--muted);">— Đại diện Trường Đại học đối tác</div>
-        </div>
+          <button type="button" class="story-open" data-story-open="story-3" data-id="story-read">Đọc câu chuyện
+            →</button>
+        </article>
       </div>
     </div>
   </section>
+
+  <div class="story-dialog" id="storyDialog" role="dialog" aria-modal="true" aria-labelledby="storyDialogTitle"
+    hidden>
+    <div class="story-dialog-backdrop" data-dialog-close></div>
+    <div class="story-dialog-panel" role="document" tabindex="-1">
+      <button type="button" class="story-dialog-close" data-dialog-close aria-label="Đóng câu chuyện"
+        data-aria-vi="Đóng câu chuyện" data-aria-en="Close story">✕</button>
+      <span class="badge badge--pink" data-id="story-dialog-badge">Câu chuyện Sen Hồng</span>
+      <h2 id="storyDialogTitle"></h2>
+      <p class="story-dialog-meta" id="storyDialogMeta"></p>
+      <div class="story-dialog-copy" id="storyDialogCopy"></div>
+    </div>
+  </div>
 
   <!-- ===== GET INVOLVED ===== -->
   <section class="section section--cream" id="involved">
     <div class="container">
       <div style="text-align:center;max-width:600px;margin:0 auto 56px;" class="fade-up">
         <div class="section-label" style="justify-content:center;margin-bottom:14px;">
-          <span class="badge badge--blue" data-id="inv-badge">Tham gia / Get Involved</span>
+          <span class="badge badge--blue" data-id="inv-badge">Đồng hành cùng chúng tôi / Get Involved</span>
         </div>
         <h2 data-id="inv-h2">Bạn muốn <span class="text-pink">đồng hành</span> cùng Sen Hồng?</h2>
-        <p class="text-muted" data-id="inv-sub">Dù là nữ sinh ứng tuyển, tình nguyện viên nhiệt huyết hay nhà tài trợ — đều có chỗ cho bạn trong hành trình này.</p>
+        <p class="text-muted" data-id="inv-sub">Dù là nữ sinh ứng tuyển, tình nguyện viên nhiệt huyết hay nhà tài trợ —
+          đều có chỗ cho bạn trong hành trình này.</p>
       </div>
       <div class="involved-grid">
         <!-- Apply -->
@@ -1585,11 +2796,16 @@
             <ellipse cx="75" cy="116" rx="40" ry="8"></ellipse>
           </svg>
           <div class="involved-icon involved-icon--pink-bg">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 6v4l3 3"></path><circle cx="12" cy="12" r="1"></circle></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+              <path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 6v4l3 3"></path>
+              <circle cx="12" cy="12" r="1"></circle>
+            </svg>
           </div>
-          <h3>Ứng tuyển học bổng</h3>
-          <p>Bạn là nữ sinh đại học có hoàn cảnh khó khăn, nghị lực và ước mơ? Hồ sơ Sen Hồng đang chờ bạn — đơn giản, minh bạch và đầy tôn trọng.</p>
-          <a href="#contact" class="btn btn--outline-white">Nộp hồ sơ ngay →</a>
+          <h3 data-id="involved-apply-title">Ứng tuyển học bổng</h3>
+          <p data-id="involved-apply-copy">Bạn là nữ sinh đại học có hoàn cảnh khó khăn, nghị lực và ước mơ? Hồ sơ Sen
+            Hồng đang chờ bạn.</p>
+          <a class="btn btn--outline-white config-link" data-link-key="scholarshipApplication"
+            data-id="involved-apply-cta">Ứng tuyển →</a>
         </div>
         <!-- Volunteer -->
         <div class="involved-card involved-card--blue fade-up">
@@ -1600,26 +2816,40 @@
             <ellipse cx="75" cy="116" rx="40" ry="8"></ellipse>
           </svg>
           <div class="involved-icon involved-icon--blue-bg">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
           </div>
-          <h3>Tham gia tình nguyện</h3>
-          <p>Bạn có kỹ năng, thời gian và mong muốn tạo ra tác động? Tình nguyện viên Sen Hồng đang cần bạn — xét duyệt hồ sơ, mentoring, truyền thông và hơn thế.</p>
-          <a href="#contact" class="btn btn--outline-white">Đăng ký tình nguyện →</a>
+          <h3 data-id="involved-volunteer-title">Tham gia tình nguyện</h3>
+          <p data-id="involved-volunteer-copy">Bạn có kỹ năng, thời gian và mong muốn tạo ra tác động? Tình nguyện viên
+            Sen Hồng đang cần bạn — xét duyệt hồ sơ, mentoring, truyền thông và hơn thế.</p>
+          <a class="btn btn--outline-white config-link" data-link-key="volunteerForm"
+            data-id="involved-volunteer-cta">Tham gia cùng chúng tôi →</a>
         </div>
         <!-- Sponsor -->
         <div class="involved-card involved-card--outline fade-up">
-          <svg class="involved-bg-deco" viewBox="0 0 150 150" fill="var(--blue-deep)" xmlns="http://www.w3.org/2000/svg" opacity=".04">
+          <svg class="involved-bg-deco" viewBox="0 0 150 150" fill="var(--blue-deep)" xmlns="http://www.w3.org/2000/svg"
+            opacity=".04">
             <ellipse cx="75" cy="110" rx="18" ry="60"></ellipse>
             <ellipse cx="75" cy="110" rx="16" ry="54" transform="rotate(-25 75 110)"></ellipse>
             <ellipse cx="75" cy="110" rx="16" ry="54" transform="rotate(25 75 110)"></ellipse>
             <ellipse cx="75" cy="116" rx="40" ry="8"></ellipse>
           </svg>
           <div class="involved-icon involved-icon--cream-bg">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
           </div>
-          <h3>Nhà tài trợ &amp; Đối tác</h3>
-          <p>Đồng hành tài chính cùng Sen Hồng — mỗi đóng góp trực tiếp tạo ra cơ hội học tập cho nữ sinh. 100% minh bạch với báo cáo định kỳ.</p>
-          <a href="#contact" class="btn btn--blue">Liên hệ hợp tác →</a>
+          <h3 data-id="involved-partner-title">Nhà tài trợ &amp; Đối tác</h3>
+          <p data-id="involved-partner-copy">Mỗi khoản đóng góp đều trực tiếp mở ra cơ hội học tập và phát triển cho nữ
+            sinh Việt Nam. Chúng tôi cam kết minh bạch và trách nhiệm trong mọi hoạt động.</p>
+          <a class="btn btn--blue config-link" data-link-key="donorPartnerForm" data-id="involved-partner-cta">Tài trợ
+            →</a>
         </div>
       </div>
     </div>
@@ -1633,80 +2863,29 @@
           <div class="section-label" style="margin-bottom:14px;">
             <span class="badge badge--pink" data-id="contact-badge">Liên hệ / Contact</span>
           </div>
-          <h2 data-id="contact-h2">Hãy cùng chúng tôi <span class="text-pink">bắt đầu</span></h2>
-          <p data-id="contact-sub">Dù bạn muốn ứng tuyển học bổng, trở thành nhà tài trợ hay đơn giản chỉ muốn biết thêm — chúng tôi luôn sẵn lòng lắng nghe.</p>
-          <div class="contact-links">
-            <a href="https://www.facebook.com/hbsenhong" class="contact-link" target="_blank" rel="noopener">
-              <div class="contact-link-icon">
-                <svg viewBox="0 0 24 24" fill="var(--blue)"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-              </div>
-              <div class="contact-link-text">
-                <strong>Facebook</strong>
-                <span>facebook.com/hbsenhong</span>
-              </div>
-            </a>
-            <a href="#" class="contact-link">
-              <div class="contact-link-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </div>
-              <div class="contact-link-text">
-                <strong>LinkedIn</strong>
-                <span>linkedin.com/company/relayfund</span>
-              </div>
-            </a>
-            <a href="mailto:info@relayfund.vn" class="contact-link">
-              <div class="contact-link-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </div>
-              <div class="contact-link-text">
-                <strong>Email</strong>
-                <span>info@relayfund.vn</span>
-              </div>
-            </a>
+          <h2 data-id="contact-h2">Cùng chúng tôi tạo thêm cơ hội cho <span class="text-pink">nữ sinh Việt Nam</span>
+          </h2>
+          <p data-id="contact-sub">Mỗi sự kết nối đều có thể mở ra một cơ hội học tập mới cho các em. Nếu bạn muốn tìm
+            hiểu về chương trình, trở thành nhà tài trợ, đối tác hoặc tình nguyện viên, hãy liên hệ với chúng tôi.</p>
+          <div class="contact-details">
+            <a class="config-link" data-link-key="contactEmail">therelayfund@gmail.com</a>
+            <a class="config-link" data-link-key="website">therelayfund.com</a>
           </div>
-        </div>
-
-        <div class="contact-form fade-up">
-          <h3 style="margin-bottom:24px;">Gửi thông tin cho chúng tôi</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Họ và tên *</label>
-              <input type="text" placeholder="Nguyễn Văn A">
-            </div>
-            <div class="form-group">
-              <label>Email *</label>
-              <input type="email" placeholder="email@example.com">
-            </div>
-          </div>
-          <div class="form-full form-group">
-            <label>Bạn muốn</label>
-            <select>
-              <option value="">Chọn mục đích liên hệ</option>
-              <option>Ứng tuyển học bổng Sen Hồng</option>
-              <option>Trở thành nhà tài trợ cá nhân</option>
-              <option>Hợp tác doanh nghiệp / Tổ chức</option>
-              <option>Đăng ký tình nguyện</option>
-              <option>Câu hỏi khác</option>
-            </select>
-          </div>
-          <div class="form-full form-group">
-            <label>Lời nhắn</label>
-            <textarea placeholder="Chia sẻ với chúng tôi câu chuyện của bạn hoặc điều bạn muốn biết thêm..."></textarea>
-          </div>
-          <button class="btn btn--pink form-submit" id="submitBtn">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            Gửi thông tin
-          </button>
-          <p style="margin-top:14px;font-size:.78rem;color:var(--muted);text-align:center;">Chúng tôi sẽ phản hồi trong vòng 24–48 giờ làm việc.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="site-notice" id="siteNotice" role="status" aria-live="polite"></div>
+
   <!-- ===== BACK TO TOP ===== -->
   <div class="back-to-top" id="backToTop">
-    <button class="btt-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    <button class="btt-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Về đầu trang"
+      data-aria-vi="Về đầu trang" data-aria-en="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
     </button>
     <span class="btt-label" id="bttLabel">Về đầu trang</span>
   </div>
@@ -1717,49 +2896,63 @@
       <div class="footer-top">
         <div class="footer-brand">
           <img src="assets/2467d23d-1bb7-41fb-ac7c-a50b584a29f5.png" alt="The Relay Fund" class="footer-logo">
-          <p>The Relay Fund – Học bổng Sen Hồng. Học bổng dành riêng cho nữ sinh Việt Nam — nghị lực, tiềm năng và ước mơ không giới hạn.</p>
+          <p data-id="footer-copy">The Relay Fund – Học bổng Sen Hồng. Học bổng dành riêng cho nữ sinh Việt Nam — nghị
+            lực, tiềm năng và ước mơ không giới hạn.</p>
           <div style="margin-top:20px;">
-            <a href="#involved" class="footer-donate-chip">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              Ủng hộ quỹ
+            <a class="footer-donate-chip config-link" data-link-key="donorPartnerForm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+              <span data-id="footer-donate">Ủng hộ quỹ</span>
             </a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Khám phá</h4>
+          <h4 data-id="footer-explore">Khám phá</h4>
           <ul>
-            <li><a href="#about">Về chúng tôi</a></li>
-            <li><a href="#programs">Học bổng Sen Hồng</a></li>
-            <li><a href="#impact">Tác động</a></li>
-            <li><a href="#stories">Câu chuyện</a></li>
+            <li><a href="#about" data-id="nav-about">Giới thiệu chung</a></li>
+            <li><a href="#sen-hong" data-id="nav-scholarship">Học bổng Sen Hồng</a></li>
+            <li><a href="#stories" data-id="nav-stories">Câu chuyện</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Tham gia</h4>
+          <h4 data-id="footer-involved">Đồng hành cùng chúng tôi</h4>
           <ul>
-            <li><a href="#contact">Ứng tuyển học bổng</a></li>
-            <li><a href="#involved">Trở thành nhà tài trợ</a></li>
-            <li><a href="#involved">Tình nguyện viên</a></li>
-            <li><a href="#contact">Hợp tác tổ chức</a></li>
+            <li><a class="config-link" data-link-key="scholarshipApplication" data-id="footer-apply">Ứng tuyển học
+                bổng</a></li>
+            <li><a class="config-link" data-link-key="donorPartnerForm" data-id="footer-sponsor">Trở thành nhà tài
+                trợ</a></li>
+            <li><a class="config-link" data-link-key="volunteerForm" data-id="footer-volunteer">Tình nguyện viên</a>
+            </li>
+            <li><a class="config-link" data-link-key="donorPartnerForm" data-id="footer-partner">Hợp tác tổ chức</a>
+            </li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Kết nối</h4>
+          <h4 data-id="footer-connect">Kết nối</h4>
           <ul>
-            <li><a href="https://www.facebook.com/hbsenhong" target="_blank">Facebook</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="mailto:info@relayfund.vn">Email</a></li>
+            <li><a class="config-link" data-link-key="facebookPage">Facebook</a></li>
+            <li><a class="config-link" data-link-key="linkedIn">LinkedIn</a></li>
+            <li><a class="config-link" data-link-key="contactEmail">Email</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 The Relay Fund – Học bổng Sen Hồng. Bảo lưu mọi quyền.</span>
+        <span data-id="footer-copyright">© 2026 The Relay Fund – Học bổng Sen Hồng. Bảo lưu mọi quyền.</span>
         <div class="footer-social">
-          <a href="https://www.facebook.com/hbsenhong" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          <a class="config-link" data-link-key="facebookPage" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="white">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
           </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <a class="config-link" data-link-key="linkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="white">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
           </a>
         </div>
       </div>
@@ -1767,31 +2960,143 @@
   </footer>
 
   <script>
+    // ===== CENTRAL CONFIGURATION =====
+    const SITE_CONFIG = Object.freeze({
+      links: {
+        facebookPage: 'https://www.facebook.com/hbsenhong',
+        scholarshipApplication: '',
+        volunteerForm: '',
+        donorPartnerForm: '',
+        riceProgram: '',
+        news: '',
+        linkedIn: '',
+        contactEmail: 'mailto:therelayfund@gmail.com',
+        website: 'https://therelayfund.com'
+      },
+      // TODO: Replace these four dummy values with official Relay Fund data.
+      impactMetrics: [
+        { value: 300, suffix: { vi: '+', en: '+' }, decimals: 0, vi: 'Sinh viên nhận học bổng', en: 'Scholarship recipients' },
+        { value: 98, suffix: { vi: '%', en: '%' }, decimals: 0, vi: 'Tốt nghiệp đúng hạn', en: 'On-time graduation' },
+        { value: 20, suffix: { vi: '+', en: '+' }, decimals: 0, vi: 'Tỉnh thành', en: 'Provinces and cities' },
+        { value: 3.5, suffix: { vi: ' tỷ', en: 'B VND' }, decimals: 1, vi: 'Tổng số tiền đã trao', en: 'Total awarded' }
+      ]
+    });
+
+    const STORY_DATA = {
+      'story-1': {
+        vi: {
+          name: 'Lan', meta: 'Câu chuyện minh họa · Nội dung sẽ cập nhật',
+          excerpt: 'Học bổng giúp em tiếp tục việc học và tin rằng hoàn cảnh không quyết định tương lai của mình.',
+          detail: ['Lan đã từng nghĩ mình phải tạm dừng việc học để phụ giúp gia đình. Sự hỗ trợ đúng lúc giúp em tiếp tục đến trường và tập trung vào mục tiêu dài hạn.', 'Đây là nội dung minh họa. Câu chuyện và hình ảnh thật sẽ được The Relay Fund cập nhật sau.']
+        },
+        en: {
+          name: 'Lan', meta: 'Sample story · Final content coming soon',
+          excerpt: 'The scholarship helped me continue my studies and believe that circumstances do not define my future.',
+          detail: ['Lan once thought she would have to pause her studies to support her family. Timely support helped her stay in school and focus on her long-term goals.', 'This is placeholder content. The Relay Fund will add the final story and imagery later.']
+        }
+      },
+      'story-2': {
+        vi: {
+          name: 'Ngân', meta: 'Câu chuyện minh họa · Nội dung sẽ cập nhật',
+          excerpt: 'Sự đồng hành của cộng đồng cho em thêm động lực vượt qua những năm tháng khó khăn nhất.',
+          detail: ['Với Ngân, học bổng là lời khẳng định rằng em không phải đi một mình. Sự sẻ chia từ cộng đồng đã giúp em vững tin hơn trong học tập và cuộc sống.', 'Đây là nội dung minh họa. Câu chuyện và hình ảnh thật sẽ được The Relay Fund cập nhật sau.']
+        },
+        en: {
+          name: 'Ngan', meta: 'Sample story · Final content coming soon',
+          excerpt: 'The community’s support gave me strength through the most difficult years.',
+          detail: ['For Ngan, the scholarship was a reminder that she did not have to walk alone. Community support strengthened her confidence in both study and life.', 'This is placeholder content. The Relay Fund will add the final story and imagery later.']
+        }
+      },
+      'story-3': {
+        vi: {
+          name: 'Phương', meta: 'Câu chuyện minh họa · Nội dung sẽ cập nhật',
+          excerpt: 'Không chỉ là hỗ trợ tài chính, Sen Hồng còn mở ra cho em một cộng đồng học hỏi và sẻ chia.',
+          detail: ['Phương tìm thấy ở Sen Hồng nhiều hơn một suất học bổng: những người cố vấn, bạn bè và cơ hội để chuẩn bị cho hành trình nghề nghiệp.', 'Đây là nội dung minh họa. Câu chuyện và hình ảnh thật sẽ được The Relay Fund cập nhật sau.']
+        },
+        en: {
+          name: 'Phuong', meta: 'Sample story · Final content coming soon',
+          excerpt: 'Beyond financial support, Sen Hong connected me with a community of learning and care.',
+          detail: ['Phuong found more than a scholarship at Sen Hong: mentors, peers, and opportunities to prepare for her career journey.', 'This is placeholder content. The Relay Fund will add the final story and imagery later.']
+        }
+      }
+    };
+
+    const heroStats = document.getElementById('heroStats');
+    heroStats.innerHTML = SITE_CONFIG.impactMetrics.map((metric, index) => `
+      <div class="hero-stat">
+        <div class="hero-stat-num"><span class="count" data-target="${metric.value}" data-decimals="${metric.decimals}">0</span><span data-impact-suffix="${index}">${metric.suffix.vi}</span></div>
+        <div class="hero-stat-label" data-impact-label="${index}">${metric.vi}</div>
+      </div>
+    `).join('');
+
     // ===== NAV SCROLL =====
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 40);
     });
 
+    // ===== PROGRAMS SUBMENU =====
+    const programsNavItem = document.querySelector('.nav-item.has-submenu');
+    const programsNavToggle = programsNavItem?.querySelector('.nav-link-toggle');
+
+    if (programsNavItem && programsNavToggle) {
+      programsNavToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = programsNavItem.classList.toggle('open');
+        programsNavToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!programsNavItem.contains(e.target)) {
+          programsNavItem.classList.remove('open');
+          programsNavToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      programsNavItem.querySelectorAll('.nav-submenu-link').forEach(link => {
+        link.addEventListener('click', () => {
+          programsNavItem.classList.remove('open');
+          programsNavToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
     // ===== MOBILE MENU =====
     const hamburger = document.getElementById('hamburger');
     const navMobile = document.getElementById('navMobile');
-    const navClose  = document.getElementById('navClose');
-    hamburger.addEventListener('click', () => navMobile.classList.add('open'));
-    navClose.addEventListener('click',  () => navMobile.classList.remove('open'));
+    const navClose = document.getElementById('navClose');
+    const mobileProgramsToggle = document.getElementById('mobileProgramsToggle');
+    const mobileProgramsSubmenu = document.getElementById('mobileProgramsSubmenu');
+    hamburger.addEventListener('click', () => {
+      navMobile.classList.add('open');
+      navClose.focus();
+    });
+    navClose.addEventListener('click', () => {
+      navMobile.classList.remove('open');
+      hamburger.focus();
+    });
+    mobileProgramsToggle.addEventListener('click', () => {
+      const isOpen = mobileProgramsSubmenu.classList.toggle('open');
+      mobileProgramsToggle.setAttribute('aria-expanded', String(isOpen));
+    });
     document.querySelectorAll('.nav-mobile-link').forEach(a => {
-      a.addEventListener('click', () => navMobile.classList.remove('open'));
+      a.addEventListener('click', () => {
+        navMobile.classList.remove('open');
+        mobileProgramsSubmenu.classList.remove('open');
+        mobileProgramsToggle.setAttribute('aria-expanded', 'false');
+      });
     });
 
     // ===== COUNTER ANIMATION =====
     function animateCounter(el) {
-      const target = parseInt(el.dataset.target);
+      const target = parseFloat(el.dataset.target);
+      const decimals = Number(el.dataset.decimals || 0);
       const duration = 1800;
       const step = target / (duration / 16);
       let current = 0;
       const timer = setInterval(() => {
         current = Math.min(current + step, target);
-        el.textContent = Math.floor(current);
+        el.textContent = decimals ? current.toFixed(decimals) : Math.floor(current);
         if (current >= target) clearInterval(timer);
       }, 16);
     }
@@ -1825,19 +3130,6 @@
       });
     }, 500);
 
-    // ===== FORM SUBMIT =====
-    document.getElementById('submitBtn').addEventListener('click', function(e) {
-      e.preventDefault();
-      this.textContent = 'Đã gửi! Cảm ơn bạn ✓';
-      this.style.background = '#10B981';
-      this.style.borderColor = '#10B981';
-      setTimeout(() => {
-        this.innerHTML = '<svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Gửi thông tin';
-        this.style.background = '';
-        this.style.borderColor = '';
-      }, 3000);
-    });
-
     // ===== BACK TO TOP =====
     const btt = document.getElementById('backToTop');
     const bttLabel = document.getElementById('bttLabel');
@@ -1845,53 +3137,238 @@
       btt.classList.toggle('visible', window.scrollY > 400);
     });
 
+    // ===== CONFIGURED LINKS & FALLBACKS =====
+    const siteNotice = document.getElementById('siteNotice');
+    let noticeTimer;
+
+    function showNotice(message) {
+      clearTimeout(noticeTimer);
+      siteNotice.textContent = message;
+      siteNotice.classList.add('visible');
+      noticeTimer = setTimeout(() => siteNotice.classList.remove('visible'), 4200);
+    }
+
+    function fallbackMessage(key, lang) {
+      const messages = {
+        scholarshipApplication: {
+          vi: 'Chương trình hiện chưa có tuyển sinh mới. Vui lòng theo dõi Facebook Sen Hồng để cập nhật thông tin.',
+          en: 'Applications are not currently open. Please follow Sen Hong on Facebook for updates.'
+        },
+        news: { vi: 'Tin tức đang được cập nhật.', en: 'News is coming soon.' },
+        riceProgram: { vi: 'Chương trình Gạo yêu thương đang được cập nhật.', en: 'The Rice of Love Program is coming soon.' },
+        volunteerForm: { vi: 'Form đăng ký tình nguyện sẽ được cập nhật.', en: 'The volunteer form is coming soon.' },
+        donorPartnerForm: { vi: 'Form dành cho nhà tài trợ và đối tác sẽ được cập nhật.', en: 'The donor and partner form is coming soon.' },
+        linkedIn: { vi: 'Liên kết LinkedIn sẽ được cập nhật.', en: 'The LinkedIn link is coming soon.' }
+      };
+      return messages[key]?.[lang] || (lang === 'vi' ? 'Liên kết đang được cập nhật.' : 'This link is coming soon.');
+    }
+
+    function applyConfiguredLinks() {
+      document.querySelectorAll('[data-link-key]').forEach(el => {
+        const key = el.dataset.linkKey;
+        const url = SITE_CONFIG.links[key];
+        el.classList.toggle('config-link--pending', !url);
+
+        if (url) {
+          el.href = url;
+          el.removeAttribute('role');
+          el.removeAttribute('aria-disabled');
+          el.removeAttribute('tabindex');
+          if (!url.startsWith('mailto:')) {
+            el.target = '_blank';
+            el.rel = 'noopener noreferrer';
+          }
+        } else {
+          el.removeAttribute('href');
+          el.removeAttribute('target');
+          el.removeAttribute('rel');
+          el.setAttribute('role', 'button');
+          el.setAttribute('aria-disabled', 'true');
+          el.tabIndex = 0;
+        }
+
+        if (!el.dataset.configBound) {
+          const activate = event => {
+            if (!SITE_CONFIG.links[key]) {
+              event.preventDefault();
+              showNotice(fallbackMessage(key, currentLang));
+            }
+          };
+          el.addEventListener('click', activate);
+          el.addEventListener('keydown', event => {
+            if ((event.key === 'Enter' || event.key === ' ') && !SITE_CONFIG.links[key]) activate(event);
+          });
+          el.dataset.configBound = 'true';
+        }
+      });
+    }
+
+    // ===== STORY DIALOG =====
+    const storyDialog = document.getElementById('storyDialog');
+    const storyDialogPanel = storyDialog.querySelector('.story-dialog-panel');
+    const storyDialogTitle = document.getElementById('storyDialogTitle');
+    const storyDialogMeta = document.getElementById('storyDialogMeta');
+    const storyDialogCopy = document.getElementById('storyDialogCopy');
+    const storyDialogClose = storyDialog.querySelector('.story-dialog-close');
+    let lastStoryTrigger = null;
+
+    function getDialogFocusable() {
+      return [...storyDialogPanel.querySelectorAll(
+        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      )].filter(el => el.offsetParent !== null);
+    }
+
+    function updateStoryCards(lang) {
+      document.querySelectorAll('[data-story-field]').forEach(el => {
+        const story = STORY_DATA[el.dataset.storyId]?.[lang];
+        if (story) el.textContent = story[el.dataset.storyField];
+      });
+    }
+
+    function openStoryDialog(storyId, trigger) {
+      const story = STORY_DATA[storyId]?.[currentLang];
+      if (!story) return;
+      lastStoryTrigger = trigger;
+      storyDialogTitle.textContent = story.name;
+      storyDialogMeta.textContent = story.meta;
+      storyDialogCopy.innerHTML = story.detail.map(paragraph => `<p>${paragraph}</p>`).join('');
+      storyDialog.hidden = false;
+      document.body.classList.add('dialog-open');
+      storyDialogClose.focus();
+    }
+
+    function closeStoryDialog() {
+      if (storyDialog.hidden) return;
+      storyDialog.hidden = true;
+      document.body.classList.remove('dialog-open');
+      lastStoryTrigger?.focus();
+    }
+
+    document.querySelectorAll('[data-story-open]').forEach(button => {
+      button.addEventListener('click', () => openStoryDialog(button.dataset.storyOpen, button));
+    });
+    storyDialog.querySelectorAll('[data-dialog-close]').forEach(el => el.addEventListener('click', closeStoryDialog));
+    document.addEventListener('keydown', event => {
+      if (storyDialog.hidden) return;
+      if (event.key === 'Escape') {
+        closeStoryDialog();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const focusable = getDialogFocusable();
+      if (!focusable.length) {
+        event.preventDefault();
+        storyDialogClose.focus();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
     // ===== LANGUAGE TOGGLE =====
     const translations = {
-      // NAV
-      '[data-id="nav-about"]':    { vi: 'Về chúng tôi',   en: 'About Us' },
-      '[data-id="nav-programs"]': { vi: 'Học bổng',        en: 'Programs' },
-      '[data-id="nav-impact"]':   { vi: 'Tác động',        en: 'Impact' },
-      '[data-id="nav-stories"]':  { vi: 'Câu chuyện',      en: 'Stories' },
-      '[data-id="nav-contact"]':  { vi: 'Liên hệ',         en: 'Contact' },
-      // HERO
-      '[data-id="hero-eyebrow"]': { vi: 'Học bổng dành riêng cho nữ sinh Việt Nam', en: 'Scholarship exclusively for Vietnamese female students' },
-      '[data-id="hero-h1"]':      { vi: 'Nâng đỡ ước mơ.<br>Tiếp sức <em>nữ sinh.</em>', en: 'Lift dreams.<br>Empower <em>young women.</em>' },
-      '[data-id="hero-sub"]':     { vi: 'Relay Fund – Học bổng Sen Hồng đồng hành cùng những nữ sinh tài năng, nghị lực vượt khó — để không một cô gái nào phải từ bỏ ước mơ vì thiếu điều kiện.', en: 'The Relay Fund – Pink Lotus Scholarship stands with talented, resilient young women — so no girl ever has to give up her dreams for lack of resources.' },
-      '[data-id="btn-apply"]':    { vi: 'Ứng tuyển học bổng', en: 'Apply for Scholarship' },
-      '[data-id="btn-volunteer"]':{ vi: 'Tham gia tình nguyện', en: 'Volunteer' },
-      '[data-id="btn-learn"]':    { vi: 'Tìm hiểu thêm', en: 'Learn More' },
-      '[data-id="stat-1-label"]': { vi: 'Sinh viên nhận học bổng', en: 'Scholarship Recipients' },
-      '[data-id="stat-2-label"]': { vi: 'Năm hoạt động', en: 'Years Active' },
-      '[data-id="stat-3-label"]': { vi: 'Nhà tài trợ & đối tác', en: 'Donors & Partners' },
-      '[data-id="stat-4-label"]': { vi: 'Đồng đã trao', en: 'VND Granted' },
-      // ABOUT
-      '[data-id="about-badge"]':  { vi: 'Về chúng tôi / About Us', en: 'About Us' },
-      '[data-id="about-h2"]':     { vi: 'Chúng tôi là <span class="text-pink">ai?</span>', en: 'Who <span class="text-pink">we are</span>' },
-      '[data-id="about-p1"]':     { vi: 'The Relay Fund – Học bổng Sen Hồng được thành lập với một niềm tin đơn giản: <strong>mọi sinh viên tài năng đều xứng đáng có cơ hội</strong>, bất kể hoàn cảnh xuất phát điểm.', en: 'The Relay Fund was founded on a simple belief: <strong>every talented student deserves a chance</strong>, regardless of their starting circumstances.' },
-      '[data-id="about-p2"]':     { vi: 'Chúng tôi kết nối những nhà tài trợ giàu tâm huyết với những sinh viên đang cần được tiếp sức — để tạo nên một chuỗi truyền lửa không ngừng cho thế hệ tương lai Việt Nam.', en: 'We connect passionate donors with students in need — to create an endless relay of inspiration for Vietnam\'s future generation.' },
-      // IMPACT
-      '[data-id="impact-badge"]': { vi: 'Tác động / Impact', en: 'Impact' },
-      '[data-id="impact-h2"]':    { vi: 'Những con số <span style="color:var(--pink-soft);">biết nói</span>', en: 'Numbers that <span style="color:var(--pink-soft);">speak</span>' },
-      '[data-id="impact-sub"]':   { vi: 'Mỗi con số là một cuộc đời được thay đổi, một ước mơ được nâng đỡ.', en: 'Every number is a life changed, a dream supported.' },
-      '[data-id="ic-1"]':         { vi: 'Sinh viên nhận học bổng', en: 'Scholarship Recipients' },
-      '[data-id="ic-2"]':         { vi: 'Tốt nghiệp đúng hạn', en: 'On-time Graduation Rate' },
-      '[data-id="ic-3"]':         { vi: 'Tỉnh thành trong cả nước', en: 'Provinces Reached' },
-      '[data-id="ic-4"]':         { vi: 'Nhà tài trợ & đối tác', en: 'Donors & Partners' },
-      // PROGRAMS
-      '[data-id="prog-badge"]':   { vi: 'Chương trình / Programs', en: 'Programs' },
-      '[data-id="prog-h2"]':      { vi: 'Học bổng <span class="text-pink">Sen Hồng</span>', en: 'Pink Lotus <span class="text-pink">Scholarship</span>' },
-      '[data-id="prog-sub"]':     { vi: 'Chương trình học bổng được thiết kế để không chỉ hỗ trợ tài chính, mà còn đồng hành toàn diện cùng sinh viên trong suốt hành trình học tập.', en: 'Our scholarship program is designed not just for financial support, but for holistic accompaniment throughout every student\'s academic journey.' },
-      // STORIES
-      '[data-id="stories-badge"]':{ vi: 'Câu chuyện / Stories', en: 'Stories' },
-      '[data-id="stories-h2"]':   { vi: 'Tiếng lòng của <span class="text-pink">người được trao</span>', en: 'Voices from <span class="text-pink">our scholars</span>' },
-      // GET INVOLVED
-      '[data-id="inv-badge"]':    { vi: 'Tham gia / Get Involved', en: 'Get Involved' },
-      '[data-id="inv-h2"]':       { vi: 'Bạn muốn <span class="text-pink">đồng hành</span> cùng Sen Hồng?', en: 'Want to <span class="text-pink">join</span> the Sen Hồng journey?' },
-      '[data-id="inv-sub"]':      { vi: 'Dù là nữ sinh ứng tuyển, tình nguyện viên nhiệt huyết hay nhà tài trợ — đều có chỗ cho bạn trong hành trình này.', en: 'Whether you\'re a student applicant, passionate volunteer, or sponsor — there\'s a place for you here.' },
-      // CONTACT
-      '[data-id="contact-badge"]':{ vi: 'Liên hệ / Contact', en: 'Contact' },
-      '[data-id="contact-h2"]':   { vi: 'Hãy cùng chúng tôi <span class="text-pink">bắt đầu</span>', en: 'Let\'s <span class="text-pink">get started</span>' },
-      '[data-id="contact-sub"]':  { vi: 'Dù bạn muốn ứng tuyển học bổng, trở thành nhà tài trợ hay đơn giản chỉ muốn biết thêm — chúng tôi luôn sẵn lòng lắng nghe.', en: 'Whether you want to apply for a scholarship, become a sponsor, or simply learn more — we\'re always here to listen.' },
+      '[data-id="nav-about"]': { vi: 'Giới thiệu chung', en: 'About Us' },
+      '[data-id="nav-programs"]': { vi: 'Chương trình', en: 'Programs' },
+      '[data-id="nav-scholarship"]': { vi: 'Học bổng Sen Hồng', en: 'Sen Hong Scholarship' },
+      '[data-id="nav-rice"]': { vi: 'Chương trình Gạo yêu thương (Đang cập nhật)', en: 'Rice of Love Program (Coming soon)' },
+      '[data-id="nav-stories"]': { vi: 'Câu chuyện', en: 'Stories' },
+      '[data-id="nav-news"]': { vi: 'Tin tức', en: 'News' },
+      '[data-id="nav-contact"]': { vi: 'Liên hệ', en: 'Contact' },
+      '[data-id="nav-apply"]': { vi: 'Ứng tuyển', en: 'Apply' },
+      '[data-id="hero-eyebrow"]': { vi: 'Đồng hành cùng nữ sinh Việt Nam', en: 'Standing with Vietnamese female students' },
+      '[data-id="hero-h1"]': { vi: 'Nâng đỡ ước mơ.<br>Tiếp sức <em>nữ sinh.</em>', en: 'Lift dreams.<br>Empower <em>young women.</em>' },
+      '[data-id="hero-sub"]': { vi: 'Mỗi nữ sinh đều có những ước mơ cho riêng mình. The Relay Fund được tạo nên để những ước mơ ấy không phải dừng lại vì hoàn cảnh khó khăn. Chúng tôi kết nối sự sẻ chia từ cộng đồng để mang đến cơ hội học tập và động lực vươn lên cho các em.', en: 'Every young woman has dreams of her own. The Relay Fund exists so those dreams do not have to end because of difficult circumstances. We connect the generosity of our community with opportunities to learn and the encouragement to move forward.' },
+      '[data-id="btn-apply"]': { vi: 'Ứng tuyển học bổng', en: 'Apply for Scholarship' },
+      '[data-id="btn-involved"]': { vi: 'Đồng hành cùng chúng tôi', en: 'Get Involved' },
+      '[data-id="btn-learn"]': { vi: 'Tìm hiểu thêm', en: 'Learn More' },
+      '[data-id="about-badge"]': { vi: 'Giới thiệu chung / About Us', en: 'About Us' },
+      '[data-id="about-h2"]': { vi: 'Chúng tôi là <span class="text-pink">ai?</span>', en: 'Who <span class="text-pink">we are</span>' },
+      '[data-id="about-p1"]': { vi: 'The Relay Fund là một doanh nghiệp xã hội (MST: 0317235089) được thành lập với mong muốn kết nối những nhà tài trợ giàu tâm huyết với các nữ sinh có hoàn cảnh khó khăn nhưng giàu nghị lực, giúp các em có thêm cơ hội theo đuổi việc học và những ước mơ của mình.', en: 'The Relay Fund is a social enterprise (Tax ID: 0317235089) founded to connect committed donors with resilient female students facing financial hardship, giving them a stronger opportunity to pursue their education and dreams.' },
+      '[data-id="about-p2"]': { vi: 'Chúng tôi tin rằng hoàn cảnh không nên là rào cản khiến một em gái phải từ bỏ tương lai mà em mong muốn. Thông qua hỗ trợ vật chất, các chương trình phát triển kỹ năng và sự đồng hành từ cộng đồng, The Relay Fund giúp các em có thêm điểm tựa để vững bước trên hành trình học tập và trưởng thành.', en: 'We believe circumstances should never force a young woman to give up the future she hopes for. Through financial support, skills-development programs, and community encouragement, The Relay Fund helps students move forward with confidence in their education and growth.' },
+      '[data-id="mission-title"]': { vi: 'Sứ mệnh', en: 'Mission' },
+      '[data-id="mission-copy"]': { vi: 'Trao cơ hội học tập và đồng hành cùng nữ sinh trên hành trình trưởng thành bằng tri thức.', en: 'Create educational opportunities and stand with female students as they grow through knowledge.' },
+      '[data-id="vision-title"]': { vi: 'Tầm nhìn', en: 'Vision' },
+      '[data-id="vision-copy"]': { vi: 'Góp phần xây dựng một Việt Nam nơi các nữ sinh có hoàn cảnh khó khăn được tiếp cận cơ hội học tập và phát triển.', en: 'Help build a Vietnam where female students facing hardship can access opportunities to learn and grow.' },
+      '[data-id="transparency-title"]': { vi: 'Minh bạch', en: 'Transparency' },
+      '[data-id="transparency-copy"]': { vi: 'Mọi khoản tài trợ được quản lý công khai, báo cáo định kỳ và sử dụng đúng mục đích.', en: 'Every contribution is managed openly, reported regularly, and used for its intended purpose.' },
+      '[data-id="about-why-badge"]': { vi: 'Giới thiệu chung / About Us', en: 'About Us' },
+      '[data-id="about-why-h2"]': { vi: 'Vì sao đầu tư vào <span style="color:var(--pink-soft);">giáo dục nữ sinh?</span>', en: 'Why invest in <span style="color:var(--pink-soft);">girls\' education?</span>' },
+      '[data-id="about-why-title-1"]': { vi: 'Mở ra cơ hội nghề nghiệp', en: 'Open career opportunities' },
+      '[data-id="about-why-copy-1"]': { vi: 'Mỗi năm học thêm có thể giúp tăng thu nhập trung bình khoảng 10% trong tương lai.', en: 'Each additional year of education can increase average future income by around 10%.' },
+      '[data-id="about-why-title-2"]': { vi: 'Tác động đến gia đình', en: 'Strengthen families' },
+      '[data-id="about-why-copy-2"]': { vi: 'Trình độ học vấn của người mẹ có ảnh hưởng tích cực đến sức khỏe và cơ hội phát triển của con cái.', en: 'A mother\'s education positively influences her children\'s health and opportunities to thrive.' },
+      '[data-id="about-why-title-3"]': { vi: 'Lan tỏa đến cộng đồng', en: 'Create community impact' },
+      '[data-id="about-why-copy-3"]': { vi: 'Đầu tư vào giáo dục phụ nữ được xem là một trong những khoản đầu tư mang lại hiệu quả kinh tế và xã hội cao nhất.', en: 'Investing in women\'s education is considered one of the most effective investments in economic and social progress.' },
+      '[data-id="about-why-closing"]': { vi: 'Một cơ hội được trao hôm nay không chỉ giúp thay đổi cuộc đời của một nữ sinh mà còn tạo ra những tác động tích cực cho gia đình, cộng đồng và thế hệ tiếp theo.', en: 'An opportunity given today can transform not only one student\'s life, but also her family, community, and the generations that follow.' },
+      '[data-id="prog-badge"]': { vi: 'Chương trình / Programs', en: 'Programs' },
+      '[data-id="prog-h2"]': { vi: 'Học bổng <span class="text-pink">Sen Hồng</span>', en: 'Pink Lotus <span class="text-pink">Scholarship</span>' },
+      '[data-id="prog-kicker"]': { vi: 'Đồng hành cùng nữ sinh trên hành trình đại học', en: 'Supporting female students throughout university' },
+      '[data-id="prog-sub"]': { vi: 'Học bổng Sen Hồng dành cho nữ sinh Việt Nam có hoàn cảnh khó khăn nhưng giàu nghị lực và khát vọng vươn lên. Không chỉ hỗ trợ tài chính, chương trình còn đồng hành cùng học viên trong suốt hành trình đại học thông qua các hoạt động phát triển kỹ năng, định hướng nghề nghiệp và kết nối cộng đồng.', en: 'The Sen Hong Scholarship supports resilient Vietnamese female students facing financial hardship. Beyond financial assistance, the program accompanies scholars throughout university with skills development, career guidance, and community connections.' },
+      '[data-id="program-card-name"]': { vi: 'Học bổng<br>Sen Hồng', en: 'Sen Hong<br>Scholarship' },
+      '[data-id="scholarship-value"]': { vi: 'Từ 10 triệu đồng/năm', en: 'From VND 10 million per year' },
+      '[data-id="scholarship-support"]': { vi: 'Hỗ trợ đến khi tốt nghiệp, cùng các cơ hội học tập, phát triển kỹ năng và kết nối nghề nghiệp', en: 'Support through graduation, plus learning, skills-development, and career-networking opportunities' },
+      '[data-id="program-details-title"]': { vi: 'Điều kiện & Quy trình ứng tuyển', en: 'Eligibility & Application Process' },
+      '[data-id="eligibility-title"]': { vi: 'Đối tượng', en: 'Eligibility' },
+      '[data-id="eligibility-1"]': { vi: 'Nữ sinh đại học hoặc cao đẳng chính quy tại Việt Nam', en: 'Female student in a formal university or college program in Vietnam' },
+      '[data-id="eligibility-2"]': { vi: 'Có hoàn cảnh khó khăn về kinh tế', en: 'Facing financial hardship' },
+      '[data-id="eligibility-3"]': { vi: 'Có ý chí học tập, tinh thần cầu tiến và khát vọng phát triển bản thân', en: 'Committed to learning, growth, and self-development' },
+      '[data-id="eligibility-4"]': { vi: 'Tích cực tham gia hoặc mong muốn đóng góp cho cộng đồng', en: 'Active in or aspiring to contribute to the community' },
+      '[data-id="criteria-title"]': { vi: 'Tiêu chí xét tuyển', en: 'Selection criteria' },
+      '[data-id="criteria-1"]': { vi: 'Nghị lực vượt khó', en: 'Resilience in overcoming hardship' },
+      '[data-id="criteria-2"]': { vi: 'Thành tích và tinh thần học tập', en: 'Academic achievement and learning mindset' },
+      '[data-id="criteria-3"]': { vi: 'Tiềm năng phát triển trong tương lai', en: 'Future development potential' },
+      '[data-id="criteria-4"]': { vi: 'Khả năng tạo tác động tích cực cho cộng đồng', en: 'Potential for positive community impact' },
+      '[data-id="fields-title"]': { vi: 'Ngành học ưu tiên', en: 'Priority fields of study' },
+      '[data-id="field-1"]': { vi: 'Y Dược', en: 'Medicine & Pharmacy' },
+      '[data-id="field-2"]': { vi: 'Sư phạm', en: 'Education' },
+      '[data-id="field-3"]': { vi: 'Kỹ thuật', en: 'Engineering' },
+      '[data-id="field-4"]': { vi: 'Khoa học Tự nhiên', en: 'Natural Sciences' },
+      '[data-id="field-5"]': { vi: 'Môi trường', en: 'Environmental Studies' },
+      '[data-id="field-6"]': { vi: 'Lĩnh vực tạo tác động tích cực cho cộng đồng', en: 'Fields with positive community impact' },
+      '[data-id="field-note"]': { vi: 'Học bổng không giới hạn ngành học và khuyến khích ứng tuyển từ mọi lĩnh vực đào tạo.', en: 'The scholarship is open to all fields of study and welcomes applications from every discipline.' },
+      '[data-id="process-title"]': { vi: 'Quy trình ứng tuyển', en: 'Application process' },
+      '[data-id="process-1"]': { vi: '<strong>Nộp hồ sơ trực tuyến</strong>', en: '<strong>Submit an online application</strong>' },
+      '[data-id="process-2"]': { vi: '<strong>Đánh giá hồ sơ</strong>', en: '<strong>Application review</strong>' },
+      '[data-id="process-3"]': { vi: '<strong>Phỏng vấn</strong>', en: '<strong>Interview</strong>' },
+      '[data-id="process-4"]': { vi: '<strong>Công bố kết quả</strong>', en: '<strong>Results announcement</strong>' },
+      '[data-id="apply-now"]': { vi: 'Ứng tuyển ngay', en: 'Apply now' },
+      '[data-id="stories-badge"]': { vi: 'Câu chuyện / Stories', en: 'Stories' },
+      '[data-id="stories-h2"]': { vi: 'Những hành trình <span class="text-pink">được tiếp sức</span>', en: 'Journeys <span class="text-pink">empowered</span>' },
+      '[data-id="stories-intro"]': { vi: 'Mỗi nữ sinh Sen Hồng đều mang theo một câu chuyện riêng về nghị lực, khát vọng và hành trình vượt khó. Nhờ học bổng và sự đồng hành của cộng đồng, các em có thêm cơ hội tiếp tục việc học, phát triển bản thân và từng bước hiện thực hóa ước mơ của mình.', en: 'Every Sen Hong scholar carries a personal story of resilience, aspiration, and overcoming hardship. With scholarship support and a caring community, students can continue their education, grow with confidence, and move closer to their dreams.' },
+      '[data-id="story-read"]': { vi: 'Đọc câu chuyện →', en: 'Read story →' },
+      '[data-id="story-dialog-badge"]': { vi: 'Câu chuyện Sen Hồng', en: 'Sen Hong Story' },
+      '[data-id="inv-badge"]': { vi: 'Đồng hành cùng chúng tôi / Get Involved', en: 'Get Involved' },
+      '[data-id="inv-h2"]': { vi: 'Bạn muốn <span class="text-pink">đồng hành</span> cùng Sen Hồng?', en: 'Want to <span class="text-pink">join</span> the Sen Hong journey?' },
+      '[data-id="inv-sub"]': { vi: 'Dù là nữ sinh ứng tuyển, tình nguyện viên nhiệt huyết hay nhà tài trợ — đều có chỗ cho bạn trong hành trình này.', en: 'Whether you\'re a student applicant, passionate volunteer, or sponsor — there\'s a place for you here.' },
+      '[data-id="involved-apply-title"]': { vi: 'Ứng tuyển học bổng', en: 'Apply for a scholarship' },
+      '[data-id="involved-apply-copy"]': { vi: 'Bạn là nữ sinh đại học có hoàn cảnh khó khăn, nghị lực và ước mơ? Hồ sơ Sen Hồng đang chờ bạn.', en: 'Are you a resilient university student facing hardship and pursuing a dream? Sen Hong is here for you.' },
+      '[data-id="involved-apply-cta"]': { vi: 'Ứng tuyển →', en: 'Apply →' },
+      '[data-id="involved-volunteer-title"]': { vi: 'Tham gia tình nguyện', en: 'Volunteer' },
+      '[data-id="involved-volunteer-copy"]': { vi: 'Bạn có kỹ năng, thời gian và mong muốn tạo ra tác động? Tình nguyện viên Sen Hồng đang cần bạn — xét duyệt hồ sơ, mentoring, truyền thông và hơn thế.', en: 'Do you have skills, time, and a desire to make an impact? Sen Hong welcomes volunteers for application review, mentoring, communications, and more.' },
+      '[data-id="involved-volunteer-cta"]': { vi: 'Tham gia cùng chúng tôi →', en: 'Join us →' },
+      '[data-id="involved-partner-title"]': { vi: 'Nhà tài trợ & Đối tác', en: 'Donors & Partners' },
+      '[data-id="involved-partner-copy"]': { vi: 'Mỗi khoản đóng góp đều trực tiếp mở ra cơ hội học tập và phát triển cho nữ sinh Việt Nam. Chúng tôi cam kết minh bạch và trách nhiệm trong mọi hoạt động.', en: 'Every contribution directly opens opportunities for Vietnamese female students to learn and grow. We are committed to transparency and accountability in everything we do.' },
+      '[data-id="involved-partner-cta"]': { vi: 'Tài trợ →', en: 'Support us →' },
+      '[data-id="contact-badge"]': { vi: 'Liên hệ / Contact', en: 'Contact' },
+      '[data-id="contact-h2"]': { vi: 'Cùng chúng tôi tạo thêm cơ hội cho <span class="text-pink">nữ sinh Việt Nam</span>', en: 'Create more opportunities for <span class="text-pink">Vietnamese female students</span> with us' },
+      '[data-id="contact-sub"]': { vi: 'Mỗi sự kết nối đều có thể mở ra một cơ hội học tập mới cho các em. Nếu bạn muốn tìm hiểu về chương trình, trở thành nhà tài trợ, đối tác hoặc tình nguyện viên, hãy liên hệ với chúng tôi.', en: 'Every connection can open a new educational opportunity. If you would like to learn about our programs or join us as a donor, partner, or volunteer, we would love to hear from you.' },
+      '[data-id="footer-copy"]': { vi: 'The Relay Fund – Học bổng Sen Hồng. Học bổng dành riêng cho nữ sinh Việt Nam — nghị lực, tiềm năng và ước mơ không giới hạn.', en: 'The Relay Fund – Sen Hong Scholarship. Supporting resilient Vietnamese female students with potential and limitless dreams.' },
+      '[data-id="footer-donate"]': { vi: 'Ủng hộ quỹ', en: 'Support the fund' },
+      '[data-id="footer-explore"]': { vi: 'Khám phá', en: 'Explore' },
+      '[data-id="footer-involved"]': { vi: 'Đồng hành cùng chúng tôi', en: 'Get involved' },
+      '[data-id="footer-connect"]': { vi: 'Kết nối', en: 'Connect' },
+      '[data-id="footer-apply"]': { vi: 'Ứng tuyển học bổng', en: 'Apply for a scholarship' },
+      '[data-id="footer-sponsor"]': { vi: 'Trở thành nhà tài trợ', en: 'Become a donor' },
+      '[data-id="footer-volunteer"]': { vi: 'Tình nguyện viên', en: 'Volunteer' },
+      '[data-id="footer-partner"]': { vi: 'Hợp tác tổ chức', en: 'Organizational partnership' },
+      '[data-id="footer-copyright"]': { vi: '© 2026 The Relay Fund – Học bổng Sen Hồng. Bảo lưu mọi quyền.', en: '© 2026 The Relay Fund – Sen Hong Scholarship. All rights reserved.' }
     };
 
     let currentLang = 'vi';
@@ -1908,6 +3385,19 @@
       document.querySelectorAll('[data-vi]').forEach(el => {
         el.textContent = lang === 'vi' ? el.dataset.vi : el.dataset.en;
       });
+      document.querySelectorAll('[data-alt-vi]').forEach(el => {
+        el.alt = lang === 'vi' ? el.dataset.altVi : el.dataset.altEn;
+      });
+      document.querySelectorAll('[data-aria-vi]').forEach(el => {
+        el.setAttribute('aria-label', lang === 'vi' ? el.dataset.ariaVi : el.dataset.ariaEn);
+      });
+
+      document.title = lang === 'vi'
+        ? 'The Relay Fund – Học bổng Sen Hồng'
+        : 'The Relay Fund – Sen Hong Scholarship';
+      document.querySelector('meta[name="description"]').content = lang === 'vi'
+        ? 'The Relay Fund – Học bổng Sen Hồng: Học bổng dành riêng cho nữ sinh Việt Nam tài năng, nghị lực, vượt khó. Ứng tuyển ngay.'
+        : 'The Relay Fund – Sen Hong Scholarship: Supporting talented and resilient Vietnamese female students facing hardship.';
 
       // Apply translations map (innerHTML)
       Object.entries(translations).forEach(([sel, t]) => {
@@ -1915,16 +3405,35 @@
           el.innerHTML = lang === 'vi' ? t.vi : t.en;
         });
       });
+
+      document.querySelectorAll('[data-impact-label]').forEach(el => {
+        const metric = SITE_CONFIG.impactMetrics[Number(el.dataset.impactLabel)];
+        el.textContent = metric[lang];
+      });
+      document.querySelectorAll('[data-impact-suffix]').forEach(el => {
+        const metric = SITE_CONFIG.impactMetrics[Number(el.dataset.impactSuffix)];
+        el.textContent = metric.suffix[lang];
+      });
+      heroStats.setAttribute('aria-label', lang === 'vi' ? 'Số liệu tác động tạm thời' : 'Temporary impact metrics');
+      updateStoryCards(lang);
+      applyConfiguredLinks();
+
+      if (!storyDialog.hidden && lastStoryTrigger) {
+        openStoryDialog(lastStoryTrigger.dataset.storyOpen, lastStoryTrigger);
+      }
     }
 
     document.getElementById('langToggle').addEventListener('click', () => {
       applyLang(currentLang === 'vi' ? 'en' : 'vi');
     });
 
+    applyLang('vi');
+
     // ===== TWEAKS =====
     const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-      "primaryColor": "#E8297C",
-      "accentColor": "#1B50BE",
+      "theme": "relay-light",
+      "primaryColor": "#C93680",
+      "accentColor": "#2F5FAF",
       "fontStyle": "modern",
       "showEnglish": true
     }/*EDITMODE-END*/;
@@ -1936,7 +3445,7 @@
     window.parent.postMessage({ type: '__edit_mode_available' }, '*');
 
     function showTweaks() { document.getElementById('tweaksPanel').style.display = 'block'; }
-    function hideTweaks()  { document.getElementById('tweaksPanel').style.display = 'none'; }
+    function hideTweaks() { document.getElementById('tweaksPanel').style.display = 'none'; }
   </script>
 
   <!-- TWEAKS PANEL -->
@@ -1945,35 +3454,52 @@
     border:1px solid #e5e7eb;padding:24px;width:260px;font-family:'Be Vietnam Pro',sans-serif;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
       <span style="font-size:.9rem;font-weight:700;color:#111827;">Tweaks</span>
-      <button onclick="document.getElementById('tweaksPanel').style.display='none';window.parent.postMessage({type:'__edit_mode_dismissed'},'*')" style="background:none;border:none;cursor:pointer;color:#6b7280;font-size:1.2rem;line-height:1;">✕</button>
+      <button
+        onclick="document.getElementById('tweaksPanel').style.display='none';window.parent.postMessage({type:'__edit_mode_dismissed'},'*')"
+        style="background:none;border:none;cursor:pointer;color:#6b7280;font-size:1.2rem;line-height:1;">✕</button>
     </div>
-    <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:10px;">Màu chính</div>
+    <div
+      style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:10px;">
+      Màu chính</div>
     <div style="display:flex;gap:8px;margin-bottom:18px;">
-      <button onclick="setColor('#E8297C')" style="width:36px;height:36px;border-radius:50%;background:#E8297C;border:3px solid #fff;box-shadow:0 0 0 2px #E8297C;cursor:pointer;"></button>
-      <button onclick="setColor('#7C3AED')" style="width:36px;height:36px;border-radius:50%;background:#7C3AED;border:3px solid #fff;cursor:pointer;"></button>
-      <button onclick="setColor('#0891B2')" style="width:36px;height:36px;border-radius:50%;background:#0891B2;border:3px solid #fff;cursor:pointer;"></button>
-      <button onclick="setColor('#D97706')" style="width:36px;height:36px;border-radius:50%;background:#D97706;border:3px solid #fff;cursor:pointer;"></button>
+      <button onclick="setColor('#C93680')"
+        style="width:36px;height:36px;border-radius:50%;background:#C93680;border:3px solid #fff;box-shadow:0 0 0 2px #C93680;cursor:pointer;"></button>
+      <button onclick="setColor('#7C3AED')"
+        style="width:36px;height:36px;border-radius:50%;background:#7C3AED;border:3px solid #fff;cursor:pointer;"></button>
+      <button onclick="setColor('#0891B2')"
+        style="width:36px;height:36px;border-radius:50%;background:#0891B2;border:3px solid #fff;cursor:pointer;"></button>
+      <button onclick="setColor('#D97706')"
+        style="width:36px;height:36px;border-radius:50%;background:#D97706;border:3px solid #fff;cursor:pointer;"></button>
     </div>
-    <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:10px;">Màu nền Hero</div>
+    <div
+      style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:10px;">
+      Màu nền Hero</div>
     <div style="display:flex;gap:8px;margin-bottom:18px;">
-      <button onclick="setHero('#091C5A')" style="width:36px;height:36px;border-radius:50%;background:#091C5A;border:3px solid #fff;box-shadow:0 0 0 2px #091C5A;cursor:pointer;"></button>
-      <button onclick="setHero('#1a1a2e')" style="width:36px;height:36px;border-radius:50%;background:#1a1a2e;border:3px solid #fff;cursor:pointer;"></button>
-      <button onclick="setHero('#0f3d2e')" style="width:36px;height:36px;border-radius:50%;background:#0f3d2e;border:3px solid #fff;cursor:pointer;"></button>
+      <button onclick="setHero('#F4F8FF')"
+        style="width:36px;height:36px;border-radius:50%;background:#F4F8FF;border:3px solid #fff;box-shadow:0 0 0 2px #2F5FAF;cursor:pointer;"></button>
+      <button onclick="setHero('#FFF1F7')"
+        style="width:36px;height:36px;border-radius:50%;background:#FFF1F7;border:3px solid #fff;box-shadow:0 0 0 1px #DCE6F3;cursor:pointer;"></button>
+      <button onclick="setHero('#FAFCFF')"
+        style="width:36px;height:36px;border-radius:50%;background:#FAFCFF;border:3px solid #fff;box-shadow:0 0 0 1px #DCE6F3;cursor:pointer;"></button>
     </div>
-    <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:10px;">Kiểu chữ</div>
+    <div
+      style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9ca3af;margin-bottom:10px;">
+      Kiểu chữ</div>
     <div style="display:flex;gap:8px;">
-      <button onclick="setFont('Be Vietnam Pro')" style="flex:1;padding:8px;border-radius:8px;border:1.5px solid #e5e7eb;font-size:.8rem;font-weight:600;cursor:pointer;background:#f9fafb;">Modern</button>
-      <button onclick="setFont('Georgia')" style="flex:1;padding:8px;border-radius:8px;border:1.5px solid #e5e7eb;font-size:.8rem;font-weight:600;cursor:pointer;background:#f9fafb;">Classic</button>
+      <button onclick="setFont('Be Vietnam Pro')"
+        style="flex:1;padding:8px;border-radius:8px;border:1.5px solid #e5e7eb;font-size:.8rem;font-weight:600;cursor:pointer;background:#f9fafb;">Modern</button>
+      <button onclick="setFont('Georgia')"
+        style="flex:1;padding:8px;border-radius:8px;border:1.5px solid #e5e7eb;font-size:.8rem;font-weight:600;cursor:pointer;background:#f9fafb;">Classic</button>
     </div>
   </div>
 
   <script>
     function setColor(c) {
-      document.documentElement.style.setProperty('--pink', c);
+      document.documentElement.style.setProperty('--brand-accent', c);
       window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { primaryColor: c } }, '*');
     }
     function setHero(c) {
-      document.documentElement.style.setProperty('--blue-deep', c);
+      document.documentElement.style.setProperty('--hero-background', c);
     }
     function setFont(f) {
       document.body.style.fontFamily = f + ', sans-serif';
@@ -1981,4 +3507,6 @@
   </script>
 
 
-</body></html>
+</body>
+
+</html>
