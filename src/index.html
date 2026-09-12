@@ -1304,16 +1304,33 @@
     .story-card {
       background: var(--white);
       border-radius: 20px;
-      padding: 32px;
+      padding: 0;
+      overflow: hidden;
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
       transition: var(--transition);
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     .story-card:hover {
       box-shadow: var(--shadow-lg);
       transform: translateY(-4px);
+    }
+
+    .story-card-photo {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .story-card-body {
+      padding: 28px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .story-quote-mark {
@@ -1329,6 +1346,7 @@
       line-height: 1.75;
       color: var(--text);
       margin-bottom: 24px;
+      flex: 1;
     }
 
     .story-author {
@@ -1350,6 +1368,14 @@
       font-size: .9rem;
       color: var(--white);
       flex-shrink: 0;
+      overflow: hidden;
+      background: var(--blue);
+    }
+
+    .story-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .story-author-name {
@@ -1371,6 +1397,7 @@
       font: inherit;
       font-size: .84rem;
       font-weight: 700;
+      align-self: flex-start;
     }
 
     .story-open:hover,
@@ -1405,8 +1432,8 @@
     .story-dialog-panel {
       position: relative;
       z-index: 1;
-      width: min(680px, 100%);
-      max-height: min(760px, calc(100vh - 48px));
+      width: min(760px, 100%);
+      max-height: min(860px, calc(100vh - 48px));
       overflow-y: auto;
       padding: 42px;
       border-radius: 26px;
@@ -1431,6 +1458,22 @@
 
     .story-dialog-copy p + p {
       margin-top: 16px;
+    }
+
+    .story-dialog-figure {
+      margin: 24px 0;
+    }
+
+    .story-dialog-figure:first-child {
+      margin-top: 0;
+    }
+
+    .story-dialog-figure img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
     }
 
     .story-dialog-close {
@@ -2464,8 +2507,8 @@
           <span class="hero-eyebrow-text" data-id="hero-eyebrow">Đồng hành cùng nữ sinh Việt Nam</span>
         </div>
         <h1 data-id="hero-h1">
-          Nâng đỡ ước mơ.<br>
-          Tiếp sức <em>nữ sinh.</em>
+          Trao cơ hội.<br>
+          Tiếp sức <em>ước mơ.</em>
         </h1>
         <p class="hero-sub" data-id="hero-sub">
           Mỗi nữ sinh đều có những ước mơ cho riêng mình. The Relay Fund được tạo nên để những ước mơ ấy không phải dừng
@@ -2706,7 +2749,7 @@
           <div class="section-label" style="margin-bottom:14px;">
             <span class="badge badge--blue" data-id="stories-badge">Câu chuyện / Stories</span>
           </div>
-          <h2 data-id="stories-h2">Những hành trình <span class="text-pink">được tiếp sức</span></h2>
+          <h2 data-id="stories-h2">Những câu chuyện từ hành trình <span class="text-pink">Sen Hồng</span></h2>
           <p class="stories-intro" data-id="stories-intro">Mỗi nữ sinh Sen Hồng đều mang theo một câu chuyện riêng về
             nghị lực, khát vọng và hành trình vượt khó. Nhờ học bổng và sự đồng hành của cộng đồng, các em có thêm cơ
             hội tiếp tục việc học, phát triển bản thân và từng bước hiện thực hóa ước mơ của mình.</p>
@@ -2714,49 +2757,66 @@
       </div>
       <div class="stories-grid">
         <article class="story-card fade-up">
-          <div class="story-quote-mark">"</div>
-          <p class="story-text" data-story-field="excerpt" data-story-id="story-1">Học bổng giúp em tiếp tục việc học
-            và tin rằng hoàn cảnh không quyết định tương lai của mình.</p>
-          <div class="story-author">
-            <div class="story-avatar" style="background:var(--blue);">L</div>
-            <div>
-              <div class="story-author-name" data-story-field="name" data-story-id="story-1">Lan</div>
-              <div class="story-author-meta" data-story-field="meta" data-story-id="story-1">Câu chuyện minh họa · Nội
-                dung sẽ cập nhật</div>
+          <img class="story-card-photo" src="assets/stories/tham-1.jpg" alt="Hà Thị Thắm" loading="lazy"
+            data-story-photo="story-1">
+          <div class="story-card-body">
+            <div class="story-quote-mark">"</div>
+            <p class="story-text" data-story-field="excerpt" data-story-id="story-1">Từ một cô gái chưa từng bước ra
+              khỏi lũy tre làng, tôi từng nghĩ ước mơ phải nhường chỗ cho những lo toan của cuộc sống. Hôm nay, với tấm
+              bằng Dược sĩ trong tay, tôi có thể tự tin bước đến những thành phố mới và bắt đầu cuộc sống mình từng mơ
+              ước.</p>
+            <div class="story-author">
+              <div class="story-avatar"><img src="assets/stories/tham-1.jpg" alt="" aria-hidden="true"></div>
+              <div>
+                <div class="story-author-name" data-story-field="name" data-story-id="story-1">Hà Thị Thắm</div>
+                <div class="story-author-meta" data-story-field="meta" data-story-id="story-1">Dược học · Trường Đại học
+                  Y Dược Thái Bình</div>
+              </div>
             </div>
+            <button type="button" class="story-open" data-story-open="story-1" data-id="story-read">Đọc câu chuyện
+              →</button>
           </div>
-          <button type="button" class="story-open" data-story-open="story-1" data-id="story-read">Đọc câu chuyện
-            →</button>
         </article>
         <article class="story-card fade-up">
-          <div class="story-quote-mark">"</div>
-          <p class="story-text" data-story-field="excerpt" data-story-id="story-2">Sự đồng hành của cộng đồng cho em
-            thêm động lực vượt qua những năm tháng khó khăn nhất.</p>
-          <div class="story-author">
-            <div class="story-avatar" style="background:var(--pink);">N</div>
-            <div>
-              <div class="story-author-name" data-story-field="name" data-story-id="story-2">Ngân</div>
-              <div class="story-author-meta" data-story-field="meta" data-story-id="story-2">Câu chuyện minh họa · Nội
-                dung sẽ cập nhật</div>
+          <img class="story-card-photo" src="assets/stories/quyen-1.jpg" alt="Trần Thị Thảo Quyên" loading="lazy"
+            data-story-photo="story-2">
+          <div class="story-card-body">
+            <div class="story-quote-mark">"</div>
+            <p class="story-text" data-story-field="excerpt" data-story-id="story-2">Mất mẹ khi còn trên hành trình học
+              tập, tôi chọn biến nỗi đau ấy thành động lực để theo đuổi ngành Dinh dưỡng và chăm sóc sức khỏe cho cộng
+              đồng. Giờ đây, tôi đã có công việc ổn định và có thể tiếp tục ước mơ của mình, đồng thời san sẻ phần nào
+              những vất vả của cha.</p>
+            <div class="story-author">
+              <div class="story-avatar"><img src="assets/stories/quyen-1.jpg" alt="" aria-hidden="true"></div>
+              <div>
+                <div class="story-author-name" data-story-field="name" data-story-id="story-2">Trần Thị Thảo Quyên</div>
+                <div class="story-author-meta" data-story-field="meta" data-story-id="story-2">Dinh dưỡng · Trường Đại
+                  học Y Dược Thành phố Hồ Chí Minh</div>
+              </div>
             </div>
+            <button type="button" class="story-open" data-story-open="story-2" data-id="story-read">Đọc câu chuyện
+              →</button>
           </div>
-          <button type="button" class="story-open" data-story-open="story-2" data-id="story-read">Đọc câu chuyện
-            →</button>
         </article>
         <article class="story-card fade-up">
-          <div class="story-quote-mark">"</div>
-          <p class="story-text" data-story-field="excerpt" data-story-id="story-3">Không chỉ là hỗ trợ tài chính, Sen
-            Hồng còn mở ra cho em một cộng đồng học hỏi và sẻ chia.</p>
-          <div class="story-author">
-            <div class="story-avatar" style="background:var(--color-success);">P</div>
-            <div>
-              <div class="story-author-name" data-story-field="name" data-story-id="story-3">Phương</div>
-              <div class="story-author-meta" data-story-field="meta" data-story-id="story-3">Câu chuyện minh họa · Nội
-                dung sẽ cập nhật</div>
+          <img class="story-card-photo" src="assets/stories/vy-1.jpg" alt="Tô Thảo Vy" loading="lazy"
+            data-story-photo="story-3">
+          <div class="story-card-body">
+            <div class="story-quote-mark">"</div>
+            <p class="story-text" data-story-field="excerpt" data-story-id="story-3">Là con cả trong một gia đình nông
+              dân, tôi từng phải cân nhắc giữa việc học và những lo toan về kinh tế. Tôi đã chọn đi tiếp, và hôm nay,
+              công việc ổn định cho tôi cơ hội tự lập, đồng thời có thể phụ giúp gia đình.</p>
+            <div class="story-author">
+              <div class="story-avatar"><img src="assets/stories/vy-1.jpg" alt="" aria-hidden="true"></div>
+              <div>
+                <div class="story-author-name" data-story-field="name" data-story-id="story-3">Tô Thảo Vy</div>
+                <div class="story-author-meta" data-story-field="meta" data-story-id="story-3">Kỹ thuật viên Xét nghiệm
+                  Y học · Trường Đại học Trà Vinh</div>
+              </div>
             </div>
+            <button type="button" class="story-open" data-story-open="story-3" data-id="story-read">Đọc câu chuyện
+              →</button>
           </div>
-          <button type="button" class="story-open" data-story-open="story-3" data-id="story-read">Đọc câu chuyện
-            →</button>
         </article>
       </div>
     </div>
@@ -2964,9 +3024,9 @@
     const SITE_CONFIG = Object.freeze({
       links: {
         facebookPage: 'https://www.facebook.com/hbsenhong',
-        scholarshipApplication: '',
-        volunteerForm: '',
-        donorPartnerForm: '',
+        scholarshipApplication: 'https://www.facebook.com/hbsenhong/posts/pfbid0s8MRA25qQHj1j3TMv3REwyRuecbKdUdFuQrxKuHP3YSLKGKLB7GiLUKeepo2YeK1l',
+        volunteerForm: 'https://docs.google.com/forms/d/e/1FAIpQLSf587GzLtRXyAqEO3ASknEcK6_SzJwnU3GYCHIldMhTFCVxKw/viewform',
+        donorPartnerForm: 'https://docs.google.com/forms/d/e/1FAIpQLScE7WX-yfwWRqjBGP5vBxrba6alvMUxnJwDFiR8Elv0NNh2GQ/viewform',
         riceProgram: '',
         news: '',
         linkedIn: '',
@@ -2984,40 +3044,99 @@
 
     const STORY_DATA = {
       'story-1': {
+        cover: 'assets/stories/tham-1.jpg',
+        coverAlt: { vi: 'Hà Thị Thắm', en: 'Ha Thi Tham' },
         vi: {
-          name: 'Lan', meta: 'Câu chuyện minh họa · Nội dung sẽ cập nhật',
-          excerpt: 'Học bổng giúp em tiếp tục việc học và tin rằng hoàn cảnh không quyết định tương lai của mình.',
-          detail: ['Lan đã từng nghĩ mình phải tạm dừng việc học để phụ giúp gia đình. Sự hỗ trợ đúng lúc giúp em tiếp tục đến trường và tập trung vào mục tiêu dài hạn.', 'Đây là nội dung minh họa. Câu chuyện và hình ảnh thật sẽ được The Relay Fund cập nhật sau.']
+          name: 'Hà Thị Thắm',
+          meta: 'Dược học · Trường Đại học Y Dược Thái Bình',
+          title: 'Từ cô gái chưa từng đi xa khỏi làng quê đến một cuộc sống độc lập',
+          excerpt: 'Từ một cô gái chưa từng bước ra khỏi lũy tre làng, tôi từng nghĩ ước mơ phải nhường chỗ cho những lo toan của cuộc sống. Hôm nay, với tấm bằng Dược sĩ trong tay, tôi có thể tự tin bước đến những thành phố mới và bắt đầu cuộc sống mình từng mơ ước.'
         },
         en: {
-          name: 'Lan', meta: 'Sample story · Final content coming soon',
-          excerpt: 'The scholarship helped me continue my studies and believe that circumstances do not define my future.',
-          detail: ['Lan once thought she would have to pause her studies to support her family. Timely support helped her stay in school and focus on her long-term goals.', 'This is placeholder content. The Relay Fund will add the final story and imagery later.']
-        }
+          name: 'Ha Thi Tham',
+          meta: 'Pharmacy · Thai Binh University of Medicine and Pharmacy',
+          title: 'From a girl who had never left her village to an independent life',
+          excerpt: 'As a girl who had never stepped beyond her village, I once thought dreams had to give way to life’s burdens. Today, with a pharmacist’s degree in hand, I can walk confidently into new cities and begin the life I once only imagined.'
+        },
+        // Image order matches the stories document: HÌNH 1 → mở đầu → HÌNH 2 → phần giữa → HÌNH 3 → kết
+        body: [
+          { type: 'image', src: 'assets/stories/tham-1.jpg', alt: { vi: 'Hà Thị Thắm', en: 'Ha Thi Tham' } },
+          { type: 'p', vi: 'Hà Thị Thắm lớn lên trong một gia đình làm nông ở một vùng quê nghèo tại Việt Nam. Cha mẹ Thắm chỉ đủ khả năng lo những nhu cầu cơ bản cho hai cô con gái. Trong cộng đồng nơi Thắm sinh sống, việc con gái học lên đại học gần như là điều xa lạ. Nhiều người cho rằng con gái chỉ cần biết đọc, biết viết rồi đi làm hoặc lập gia đình.', en: 'Ha Thi Tham grew up in a farming family in a poor rural area of Vietnam. Her parents could only cover the basic needs of their two daughters. In her community, sending a daughter to university was almost unheard of. Many believed girls only needed to read and write before working or marrying.' },
+          { type: 'image', src: 'assets/stories/tham-2.jpg', alt: { vi: 'Hà Thị Thắm trong hành trình học tập', en: 'Ha Thi Tham on her study journey' } },
+          { type: 'p', vi: 'Chị gái Thắm cũng đi theo con đường quen thuộc ấy. Chị nghỉ học sau lớp 7, vào làm tại một nhà máy may và kết hôn khi còn trẻ. Sau khi lập gia đình, chị không còn có thể hỗ trợ cha mẹ về tài chính như trước.', en: 'Tham’s older sister followed that familiar path. She left school after grade 7, worked in a garment factory, and married young. After starting her own family, she could no longer support their parents financially.' },
+          { type: 'p', vi: 'Rồi biến cố xảy ra khi cha Thắm qua đời vì bệnh cúm. Mẹ phải vừa làm nông vừa đi làm xây dựng để nuôi gia đình. Thắm khi ấy phải đảm nhận phần lớn việc nhà và tranh thủ làm thêm cho một thợ may trong làng.', en: 'Then their father died of the flu. Their mother had to farm and take construction jobs to keep the family going. Tham took on most of the housework and worked for a local tailor whenever she could.' },
+          { type: 'p', vi: 'Dù học khá tốt, Thắm không thể tiếp tục đến trường. Sau khi hoàn thành lớp 9, cô buộc phải nghỉ học, đi làm toàn thời gian để phụ giúp gia đình.', en: 'Despite doing well in school, Tham could not continue. After finishing grade 9, she had to leave school and work full-time to help her family.' },
+          { type: 'p', vi: 'Những ngày nhìn bạn bè đi học còn mình phải đi làm là khoảng thời gian khó khăn với Thắm. Nhưng cô chưa bao giờ từ bỏ mong muốn được trở lại trường.', en: 'Watching friends go to school while she went to work was a hard chapter. But she never gave up her wish to return to class.' },
+          { type: 'p', vi: 'Thắm bắt đầu âm thầm dành dụm tiền từ thu nhập của mình. Sau một thời gian, cô mua được một chiếc máy may. Công việc trở nên hiệu quả hơn, giúp Thắm có thêm thời gian để tự học và chuẩn bị cho kỳ thi trở lại trường.', en: 'Tham quietly saved from her earnings. In time she bought a sewing machine, worked more efficiently, and found time to study on her own for the exam that would bring her back to school.' },
+          { type: 'p', vi: 'Cô tiếp tục tiết kiệm từng khoản nhỏ. Đến một ngày, Thắm tự hào nói với mẹ rằng mình đã dành đủ tiền để trang trải chi phí học tập trong hai năm.', en: 'She kept saving small amounts until the day she proudly told her mother she had enough money for two years of schooling.' },
+          { type: 'p', vi: 'Nhìn thấy sự quyết tâm của con gái, mẹ Thắm đồng ý để cô trở lại trường.', en: 'Seeing her daughter’s determination, her mother agreed to let her return.' },
+          { type: 'p', vi: 'Nỗ lực học tập sau đó tiếp tục mở ra những cơ hội mới. Thành tích tốt giúp Thắm nhận được học bổng để hoàn thành bậc trung học và sau đó được nhận vào Trường Đại học Y Dược Thái Bình, theo học chương trình Dược kéo dài 5 năm.', en: 'Her hard work opened new doors. Strong results earned her a scholarship to finish secondary school, and she was later admitted to Thai Binh University of Medicine and Pharmacy for a five-year Pharmacy program.' },
+          { type: 'p', vi: 'Thắm chọn ngành Dược vì mong muốn có một nghề nghiệp ổn định, có thể chăm lo cho gia đình và đóng góp cho cộng đồng. Một trong những môn học cô yêu thích là Dược lý lâm sàng, nơi cô được tìm hiểu các ca bệnh thực tế, xây dựng phác đồ sử dụng thuốc và thực hành chăm sóc người bệnh.', en: 'Tham chose Pharmacy to build a stable career, care for her family, and contribute to her community. One of her favorite subjects was clinical pharmacology, where she studied real cases, treatment plans, and patient care.' },
+          { type: 'p', vi: 'Thông qua Chương trình Học bổng Sen Hồng của The Relay Fund, với sự tài trợ của U-GO, đã góp phần giúp những nữ sinh như Thắm có cơ hội tiếp tục con đường học vấn và tiến gần hơn đến một cuộc sống độc lập.', en: 'Through The Relay Fund’s Sen Hong Scholarship Program, with support from U-GO, students like Tham gained the chance to continue their education and move closer to an independent life.' },
+          { type: 'p', vi: 'Tháng 7/2023, Thắm tốt nghiệp sau năm năm học tập.', en: 'In July 2023, Tham graduated after five years of study.' },
+          { type: 'p', vi: 'Từ một cô gái từng phải rời trường sau lớp 9 để đi làm, Thắm giờ đây đã có tấm bằng đại học và rời quê đến Hà Nội để tìm kiếm công việc toàn thời gian.', en: 'From a girl who left school after grade 9 to work, she now holds a university degree and has moved to Hanoi to seek a full-time job.' },
+          { type: 'p', vi: 'Cô muốn có thể tự lập, chăm lo cho gia đình và sử dụng kiến thức của mình để góp phần vào sự phát triển của ngành y tế.', en: 'She wants to stand on her own, care for her family, and use her knowledge to help advance healthcare.' },
+          { type: 'image', src: 'assets/stories/tham-3.jpg', alt: { vi: 'Hà Thị Thắm sau khi tốt nghiệp', en: 'Ha Thi Tham after graduation' } },
+          { type: 'p', vi: 'Hành trình của Thắm không bắt đầu từ một điều kiện thuận lợi. Nó bắt đầu từ một quyết định rất giản dị nhưng đầy can đảm: không chấp nhận rằng hoàn cảnh hiện tại sẽ quyết định tương lai của mình.', en: 'Tham’s journey did not begin with advantage. It began with a simple, courageous choice: refusing to let her circumstances decide her future.' },
+          { type: 'p', vi: 'Và từ một cô gái từng nghĩ mình có thể phải bỏ lại giấc mơ học tập phía sau, Thắm đã từng bước tự mở cho mình một con đường khác.', en: 'Step by step, the girl who once feared she would have to leave her dreams behind opened a different path for herself.' }
+        ]
       },
       'story-2': {
+        cover: 'assets/stories/quyen-1.jpg',
+        coverAlt: { vi: 'Trần Thị Thảo Quyên', en: 'Tran Thi Thao Quyen' },
         vi: {
-          name: 'Ngân', meta: 'Câu chuyện minh họa · Nội dung sẽ cập nhật',
-          excerpt: 'Sự đồng hành của cộng đồng cho em thêm động lực vượt qua những năm tháng khó khăn nhất.',
-          detail: ['Với Ngân, học bổng là lời khẳng định rằng em không phải đi một mình. Sự sẻ chia từ cộng đồng đã giúp em vững tin hơn trong học tập và cuộc sống.', 'Đây là nội dung minh họa. Câu chuyện và hình ảnh thật sẽ được The Relay Fund cập nhật sau.']
+          name: 'Trần Thị Thảo Quyên',
+          meta: 'Dinh dưỡng · Trường Đại học Y Dược Thành phố Hồ Chí Minh',
+          title: 'Từ lời dặn của cha mẹ đến giấc mơ về sức khỏe cộng đồng',
+          excerpt: 'Mất mẹ khi còn trên hành trình học tập, tôi chọn biến nỗi đau ấy thành động lực để theo đuổi ngành Dinh dưỡng và chăm sóc sức khỏe cho cộng đồng. Giờ đây, tôi đã có công việc ổn định và có thể tiếp tục ước mơ của mình, đồng thời san sẻ phần nào những vất vả của cha.'
         },
         en: {
-          name: 'Ngan', meta: 'Sample story · Final content coming soon',
-          excerpt: 'The community’s support gave me strength through the most difficult years.',
-          detail: ['For Ngan, the scholarship was a reminder that she did not have to walk alone. Community support strengthened her confidence in both study and life.', 'This is placeholder content. The Relay Fund will add the final story and imagery later.']
-        }
+          name: 'Tran Thi Thao Quyen',
+          meta: 'Nutrition · University of Medicine and Pharmacy at Ho Chi Minh City',
+          title: 'From her parents’ advice to a dream of community health',
+          excerpt: 'After losing my mother while still in school, I turned that grief into motivation to pursue Nutrition and care for community health. Today I have steady work, can keep chasing my dream, and help ease some of my father’s burdens.'
+        },
+        body: [
+          { type: 'image', src: 'assets/stories/quyen-1.jpg', alt: { vi: 'Trần Thị Thảo Quyên', en: 'Tran Thi Thao Quyen' } },
+          { type: 'p', vi: 'Cha mẹ Quyên từng rời quê Phú Yên vào Thành phố Hồ Chí Minh để mưu sinh bằng những công việc lao động phổ thông. Vì muốn các con có điều kiện học tập tốt hơn, họ gửi hai chị em về quê sống cùng người dì.', en: 'Quyen’s parents left Phu Yen for Ho Chi Minh City to earn a living through manual work. Wanting better schooling for their children, they sent the two sisters back to the countryside to live with an aunt.' },
+          { type: 'p', vi: 'Từ nhỏ, Quyên đã yêu thích việc học và đặc biệt quan tâm đến sức khỏe, dinh dưỡng. Sau khi mẹ qua đời vì bệnh ung thư khi Quyên còn học phổ thông, cô càng mong muốn được tìm hiểu về sức khỏe và chăm sóc con người.', en: 'From a young age, Quyen loved learning and was especially drawn to health and nutrition. After her mother died of cancer while Quyen was still in secondary school, that wish to understand health and care for others grew even stronger.' },
+          { type: 'p', vi: 'Quyên trúng tuyển ngành Dinh dưỡng tại Trường Đại học Y Dược Thành phố Hồ Chí Minh. Xa quê để học đại học, cô vừa học vừa đối mặt với những khó khăn về tài chính của gia đình.', en: 'Quyen was admitted to Nutrition at the University of Medicine and Pharmacy at Ho Chi Minh City. Studying far from home, she balanced coursework with her family’s financial struggles.' },
+          { type: 'image', src: 'assets/stories/quyen-2.jpg', alt: { vi: 'Trần Thị Thảo Quyên trong hành trình học tập', en: 'Tran Thi Thao Quyen on her study journey' } },
+          { type: 'p', vi: 'Thông qua Chương trình Học bổng Sen Hồng của The Relay Fund, với sự tài trợ của U-GO, Quyên có thêm nguồn hỗ trợ để tiếp tục việc học và giảm bớt gánh nặng tài chính cho gia đình.', en: 'Through The Relay Fund’s Sen Hong Scholarship Program, with support from U-GO, Quyen received help to continue her studies and lighten the load on her family.' },
+          { type: 'p', vi: 'Năm 2025, Quyên tốt nghiệp ngành Dinh dưỡng và bắt đầu công việc tại Siam Thailand Cosmetic Hospital. Từ những ngày còn nhỏ, Quyên luôn ghi nhớ lời cha mẹ: “Học thật tốt để có một tương lai tốt đẹp hơn.”', en: 'In 2025, Quyen graduated in Nutrition and began working at Siam Thailand Cosmetic Hospital. From childhood she held on to her parents’ advice: “Study hard so you can build a better future.”' },
+          { type: 'p', vi: 'Với Quyên, lời dặn ấy đã trở thành động lực để cô kiên trì theo đuổi con đường học tập và xây dựng tương lai của chính mình.', en: 'For Quyen, those words became the drive that kept her on the path of learning and building a future of her own.' }
+        ]
       },
       'story-3': {
+        cover: 'assets/stories/vy-1.jpg',
+        coverAlt: { vi: 'Tô Thảo Vy', en: 'To Thao Vy' },
         vi: {
-          name: 'Phương', meta: 'Câu chuyện minh họa · Nội dung sẽ cập nhật',
-          excerpt: 'Không chỉ là hỗ trợ tài chính, Sen Hồng còn mở ra cho em một cộng đồng học hỏi và sẻ chia.',
-          detail: ['Phương tìm thấy ở Sen Hồng nhiều hơn một suất học bổng: những người cố vấn, bạn bè và cơ hội để chuẩn bị cho hành trình nghề nghiệp.', 'Đây là nội dung minh họa. Câu chuyện và hình ảnh thật sẽ được The Relay Fund cập nhật sau.']
+          name: 'Tô Thảo Vy',
+          meta: 'Kỹ thuật viên Xét nghiệm Y học · Trường Đại học Trà Vinh',
+          title: 'Từ ánh đèn dầu đến phòng xét nghiệm',
+          excerpt: 'Là con cả trong một gia đình nông dân, tôi từng phải cân nhắc giữa việc học và những lo toan về kinh tế. Tôi đã chọn đi tiếp, và hôm nay, công việc ổn định cho tôi cơ hội tự lập, đồng thời có thể phụ giúp gia đình.'
         },
         en: {
-          name: 'Phuong', meta: 'Sample story · Final content coming soon',
-          excerpt: 'Beyond financial support, Sen Hong connected me with a community of learning and care.',
-          detail: ['Phuong found more than a scholarship at Sen Hong: mentors, peers, and opportunities to prepare for her career journey.', 'This is placeholder content. The Relay Fund will add the final story and imagery later.']
-        }
+          name: 'To Thao Vy',
+          meta: 'Medical Laboratory Technician · Tra Vinh University',
+          title: 'From oil-lamp nights to the laboratory',
+          excerpt: 'As the eldest child in a farming family, I once had to weigh studying against financial worries. I chose to keep going, and today a steady job lets me stand on my own and help my family.'
+        },
+        body: [
+          { type: 'image', src: 'assets/stories/vy-1.jpg', alt: { vi: 'Tô Thảo Vy', en: 'To Thao Vy' } },
+          { type: 'p', vi: 'Tô Thảo Vy lớn lên trong một gia đình làm nông ở một vùng quê thuộc huyện Trà Ôn, tỉnh Vĩnh Long. Là chị cả trong gia đình, Vy từ nhỏ đã hiểu rằng việc học của mình không chỉ là ước mơ cá nhân, mà còn là niềm hy vọng của cả gia đình.', en: 'To Thao Vy grew up in a farming family in Tra On District, Vinh Long Province. As the eldest sibling, she understood early that her education was not only her own dream, but the hope of her whole family.' },
+          { type: 'image', src: 'assets/stories/vy-2.jpg', alt: { vi: 'Tô Thảo Vy và gia đình', en: 'To Thao Vy and her family' } },
+          { type: 'p', vi: 'Gia đình Vy sống trong một căn nhà gạch cũ với mái tôn thường xuyên dột. Vì không đủ điều kiện kéo điện về nhà, những năm tháng học tập của Vy gắn với ánh đèn dầu. Cha mẹ Vy đều làm nông và phải làm nhiều công việc khác nhau để trang trải cuộc sống, nhưng vẫn luôn cố gắng để hai anh em được đến trường.', en: 'They lived in an old brick house with a leaky corrugated roof. Without electricity at home, Vy studied by oil lamp. Her parents farmed and took on extra work to get by, always striving to keep both children in school.' },
+          { type: 'p', vi: 'Những khó khăn càng chồng chất trong thời gian COVID-19. Công việc làm thuê của cha mẹ bị ảnh hưởng, trong khi ông của Vy lâm bệnh nặng, phải nhập viện và cần gia đình chăm sóc. Các khoản chi phí y tế khiến gia đình phải vay mượn. Trong khả năng của mình, Vy cố gắng san sẻ bằng cách phụ giúp việc nhà, chăm sóc ông bà, hỗ trợ người thân và kèm em trai học tập.', en: 'Hardship deepened during COVID-19. Her parents’ hired work dried up, while her grandfather fell seriously ill and needed hospital care. Medical costs pushed the family into debt. Vy helped however she could—housework, caring for her grandparents, supporting relatives, and tutoring her younger brother.' },
+          { type: 'p', vi: 'Sau khi tốt nghiệp THPT, Vy trúng tuyển vào Trường Đại học Trà Vinh, theo học ngành Xét nghiệm Y học. Vy lựa chọn ngành học này với mong muốn được làm công việc hỗ trợ bác sĩ và người bệnh trong quá trình chẩn đoán và điều trị.', en: 'After high school, Vy was admitted to Tra Vinh University to study Medical Laboratory Science. She chose the field hoping to support doctors and patients in diagnosis and treatment.' },
+          { type: 'p', vi: 'Nhưng để theo đuổi đại học, Vy phải vừa học vừa làm thêm. Chi phí học tập vẫn là một áp lực lớn đối với gia đình, và có những lúc cô lo rằng giấc mơ về một công việc ổn định để có thể chăm lo cho gia đình sẽ khó trở thành hiện thực.', en: 'To stay in university, she had to study and work at the same time. Tuition remained a heavy burden, and she sometimes feared her dream of a stable job that could support her family might slip away.' },
+          { type: 'p', vi: 'Bước ngoặt đến vào năm thứ hai đại học, khi Vy nhận được học bổng U-GO, được thực hiện với sự đồng hành của The Relay Fund. Khoản hỗ trợ học phí đã giúp Vy giảm bớt gánh nặng tài chính và có thêm điều kiện để tiếp tục việc học.', en: 'The turning point came in her second year, when she received a U-GO scholarship delivered with The Relay Fund. Tuition support eased the financial pressure and helped her continue.' },
+          { type: 'image', src: 'assets/stories/vy-3.jpg', alt: { vi: 'Tô Thảo Vy tại phòng xét nghiệm', en: 'To Thao Vy in the laboratory' } },
+          { type: 'p', vi: 'Tháng 2/2023, Vy tốt nghiệp Đại học Trà Vinh. Sau đó, cô hoàn thành chương trình chứng chỉ tại Bệnh viện Đa khoa Vĩnh Long và làm việc cuối tuần tại một phòng khám tư nhân chuyên về xét nghiệm.', en: 'In February 2023, Vy graduated from Tra Vinh University. She then completed a certificate program at Vinh Long General Hospital and worked weekends at a private clinic specializing in laboratory testing.' },
+          { type: 'p', vi: 'Hôm nay, Vy đã có công việc toàn thời gian tại phòng khám. Thu nhập giúp cô trang trải cuộc sống và mỗi tháng vẫn có thể gửi một phần về cho gia đình, đồng thời góp phần hỗ trợ việc học đại học của em trai.', en: 'Today Vy has a full-time job at the clinic. Her income covers her living costs, lets her send money home each month, and helps support her brother’s university studies.' },
+          { type: 'p', vi: 'Với Vy, một công việc ổn định không chỉ là điểm đến của hành trình học tập. Đó còn là cách cô từng bước thực hiện điều mình luôn mong muốn: có thể tự lo cho bản thân, san sẻ với gia đình và tạo thêm cơ hội cho em trai mình.', en: 'For Vy, a steady job is more than the destination of her studies. It is how she gradually achieves what she has always wanted: to care for herself, share with her family, and open more doors for her brother.' },
+          { type: 'p', vi: 'Và trong những dự định phía trước, Vy vẫn còn một việc cô muốn làm cho cha mẹ: sửa lại mái nhà đã từng che chở cho cả gia đình qua những năm tháng khó khăn.', en: 'And among the plans ahead, she still wants to do one thing for her parents: repair the roof that sheltered their family through years of hardship.' }
+        ]
       }
     };
 
@@ -3218,20 +3337,44 @@
       )].filter(el => el.offsetParent !== null);
     }
 
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderStoryBody(entry, lang) {
+      return (entry.body || []).map(block => {
+        if (block.type === 'image') {
+          return `<figure class="story-dialog-figure"><img src="${escapeHtml(block.src)}" alt="${escapeHtml(block.alt[lang])}" loading="lazy"></figure>`;
+        }
+        return `<p>${escapeHtml(block[lang])}</p>`;
+      }).join('');
+    }
+
     function updateStoryCards(lang) {
       document.querySelectorAll('[data-story-field]').forEach(el => {
         const story = STORY_DATA[el.dataset.storyId]?.[lang];
         if (story) el.textContent = story[el.dataset.storyField];
       });
+      document.querySelectorAll('[data-story-photo]').forEach(el => {
+        const entry = STORY_DATA[el.dataset.storyPhoto];
+        if (entry?.coverAlt) el.alt = entry.coverAlt[lang];
+      });
     }
 
     function openStoryDialog(storyId, trigger) {
-      const story = STORY_DATA[storyId]?.[currentLang];
+      const entry = STORY_DATA[storyId];
+      const story = entry?.[currentLang];
       if (!story) return;
       lastStoryTrigger = trigger;
-      storyDialogTitle.textContent = story.name;
-      storyDialogMeta.textContent = story.meta;
-      storyDialogCopy.innerHTML = story.detail.map(paragraph => `<p>${paragraph}</p>`).join('');
+      storyDialogTitle.textContent = story.title || story.name;
+      storyDialogMeta.textContent = story.title
+        ? `${story.name} · ${story.meta}`
+        : story.meta;
+      storyDialogCopy.innerHTML = renderStoryBody(entry, currentLang);
       storyDialog.hidden = false;
       document.body.classList.add('dialog-open');
       storyDialogClose.focus();
@@ -3283,7 +3426,7 @@
       '[data-id="nav-contact"]': { vi: 'Liên hệ', en: 'Contact' },
       '[data-id="nav-apply"]': { vi: 'Ứng tuyển', en: 'Apply' },
       '[data-id="hero-eyebrow"]': { vi: 'Đồng hành cùng nữ sinh Việt Nam', en: 'Standing with Vietnamese female students' },
-      '[data-id="hero-h1"]': { vi: 'Nâng đỡ ước mơ.<br>Tiếp sức <em>nữ sinh.</em>', en: 'Lift dreams.<br>Empower <em>young women.</em>' },
+      '[data-id="hero-h1"]': { vi: 'Trao cơ hội.<br>Tiếp sức <em>ước mơ.</em>', en: 'Create opportunity.<br>Fuel <em>dreams.</em>' },
       '[data-id="hero-sub"]': { vi: 'Mỗi nữ sinh đều có những ước mơ cho riêng mình. The Relay Fund được tạo nên để những ước mơ ấy không phải dừng lại vì hoàn cảnh khó khăn. Chúng tôi kết nối sự sẻ chia từ cộng đồng để mang đến cơ hội học tập và động lực vươn lên cho các em.', en: 'Every young woman has dreams of her own. The Relay Fund exists so those dreams do not have to end because of difficult circumstances. We connect the generosity of our community with opportunities to learn and the encouragement to move forward.' },
       '[data-id="btn-apply"]': { vi: 'Ứng tuyển học bổng', en: 'Apply for Scholarship' },
       '[data-id="btn-involved"]': { vi: 'Đồng hành cùng chúng tôi', en: 'Get Involved' },
@@ -3340,7 +3483,7 @@
       '[data-id="process-4"]': { vi: '<strong>Công bố kết quả</strong>', en: '<strong>Results announcement</strong>' },
       '[data-id="apply-now"]': { vi: 'Ứng tuyển ngay', en: 'Apply now' },
       '[data-id="stories-badge"]': { vi: 'Câu chuyện / Stories', en: 'Stories' },
-      '[data-id="stories-h2"]': { vi: 'Những hành trình <span class="text-pink">được tiếp sức</span>', en: 'Journeys <span class="text-pink">empowered</span>' },
+      '[data-id="stories-h2"]': { vi: 'Những câu chuyện từ hành trình <span class="text-pink">Sen Hồng</span>', en: 'Stories from the <span class="text-pink">Sen Hong</span> journey' },
       '[data-id="stories-intro"]': { vi: 'Mỗi nữ sinh Sen Hồng đều mang theo một câu chuyện riêng về nghị lực, khát vọng và hành trình vượt khó. Nhờ học bổng và sự đồng hành của cộng đồng, các em có thêm cơ hội tiếp tục việc học, phát triển bản thân và từng bước hiện thực hóa ước mơ của mình.', en: 'Every Sen Hong scholar carries a personal story of resilience, aspiration, and overcoming hardship. With scholarship support and a caring community, students can continue their education, grow with confidence, and move closer to their dreams.' },
       '[data-id="story-read"]': { vi: 'Đọc câu chuyện →', en: 'Read story →' },
       '[data-id="story-dialog-badge"]': { vi: 'Câu chuyện Sen Hồng', en: 'Sen Hong Story' },
