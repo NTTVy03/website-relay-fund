@@ -1,6 +1,11 @@
 # Implementation plan — Feedback round 22/10/2026
 
-Status: **DRAFT — waiting for approval. No code or assets have been changed yet.**
+Status: **APPROVED and IMPLEMENTED on branch `feat/feedback-2026-10-22` (not pushed).**
+
+Implementation notes (deviations from the plan below):
+- Because all source edits live in the single `src/index.html`, the planned commits 3–6 were merged into one `feat:` commit.
+- U-GO clear space is set to 50% of the logo height via `--ugo-clear`; the caption above the logo sits outside that clear space.
+- The program card still shows the English subtitle `Pink Lotus Scholarship` (hard-coded brand subtitle, not part of the English toggle). Left as-is pending owner decision.
 
 ## 1. Inputs reviewed
 
