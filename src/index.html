@@ -1648,7 +1648,18 @@
       color: var(--muted);
       margin-bottom: 24px;
       line-height: 1.85;
-      max-width: 720px;
+      max-width: 760px;
+    }
+
+    /* desktop only: break the contact paragraph after "tìm hiểu" */
+    .br-lg {
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+      .br-lg {
+        display: inline;
+      }
     }
 
     .contact-cta {
@@ -1831,66 +1842,69 @@
     }
 
     .footer-top {
+      --footer-logo-h: 56px;
+      /* U-GO guideline: clear space around the logo ≈ 50% of its height */
+      --footer-card-pad: calc(var(--footer-logo-h) * .5);
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 48px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+      column-gap: 48px;
+      row-gap: 20px;
       margin-bottom: 48px;
       padding-bottom: 48px;
       border-bottom: 1px solid rgba(255, 255, 255, .1);
     }
 
-    .footer-brand {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    /* each column spans the 3 rows and shares them (subgrid) so the logo cards line up */
+    .footer-col {
+      grid-row: 1 / span 3;
+      display: grid;
+      grid-template-rows: subgrid;
+      justify-items: center;
       text-align: center;
     }
 
-    .footer-brand p {
+    .footer-col-head {
+      grid-row: 1;
+      align-self: end;
+    }
+
+    .footer-col-main {
+      grid-row: 2;
+      align-self: center;
+    }
+
+    .footer-col-note {
+      grid-row: 3;
+      align-self: start;
       font-size: .875rem;
       color: rgba(255, 255, 255, .55);
       line-height: 1.75;
-      margin-top: 16px;
       max-width: 280px;
     }
 
-    .footer-logo {
-      height: 36px;
-      filter: brightness(0) invert(1);
-    }
-
-    .footer-sponsor {
-      --sponsor-logo-h: 56px;
-      /* U-GO guideline: clear space around the logo ≈ 50% of its height */
-      --ugo-clear: calc(var(--sponsor-logo-h) * .5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      text-align: center;
-    }
-
-    .footer-sponsor-title {
+    .footer-col-title {
       font-size: .8rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .1em;
       line-height: 1.6;
       color: rgba(255, 255, 255, .7);
-      max-width: 360px;
     }
 
-    .footer-sponsor-card {
-      display: inline-flex;
+    /* identical white cards so both logos look the same size */
+    .footer-logo-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(var(--footer-logo-h) * 4);
+      height: calc(var(--footer-logo-h) + var(--footer-card-pad) * 2);
       background: var(--white);
       border-radius: 16px;
-      padding: var(--ugo-clear);
     }
 
-    .footer-sponsor-logo {
-      height: var(--sponsor-logo-h);
+    .footer-logo-card img {
+      height: var(--footer-logo-h);
       width: auto;
       display: block;
     }
@@ -2337,10 +2351,6 @@
       .impact-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-      .footer-top {
-        grid-template-columns: 1fr 1fr;
-      }
     }
 
     @media (max-width: 768px) {
@@ -2402,12 +2412,25 @@
       }
 
       .footer-top {
-        grid-template-columns: 1fr;
+        --footer-logo-h: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 36px;
       }
 
-      .footer-sponsor {
-        --sponsor-logo-h: 48px;
+      .footer-col {
+        grid-row: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .footer-col-head,
+      .footer-col-main,
+      .footer-col-note {
+        align-self: center;
       }
 
       .footer-bottom {
@@ -2468,9 +2491,6 @@
         justify-content: center;
       }
 
-      .footer-top {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
@@ -2695,9 +2715,7 @@
         thay đổi cuộc đời của một nữ sinh mà còn tạo ra những tác động tích cực cho gia đình, cộng đồng và thế hệ tiếp
         theo.</p>
       <p class="impact-footnote fade-up" id="why-footnote-1" data-id="about-why-footnote"><span
-          class="footnote-num">[1]</span> Nguồn: Parajuli, Dilip, Dung Kieu Vo, Jamil Salmi và Nguyet Thi Anh Tran.
-        2020. <em>Improving the Performance of Higher Education in Vietnam: Strategic Priorities and Policy
-          Options</em>. Washington, DC: Ngân hàng Thế giới, trang 4.</p>
+          class="footnote-num">[1]</span> (Nguồn: Parajuli, Dilip, Dung Kieu Vo, Jamil Salmi và Nguyet Thi Anh Tran (2020). <em>Improving the Performance of Higher Education in Vietnam: Strategic Priorities and Policy Options</em>. Washington, DC: World Bank, tr. 4.)</p>
     </div>
   </section>
 
@@ -2900,8 +2918,6 @@
           <span class="badge badge--blue" data-id="inv-badge">Đồng hành cùng chúng tôi</span>
         </div>
         <h2 data-id="inv-h2">Bạn muốn <span class="text-pink">đồng hành</span> cùng Sen Hồng?</h2>
-        <p class="text-muted" data-id="inv-sub">Dù là nữ sinh ứng tuyển, tình nguyện viên nhiệt huyết hay nhà tài trợ –
-          mỗi người đều có thể đồng hành cùng Sen Hồng theo cách của mình.</p>
       </div>
       <div class="involved-grid">
         <!-- Apply -->
@@ -2983,10 +2999,10 @@
           <h2 data-id="contact-h2">Cùng chúng tôi tạo thêm cơ hội cho <span class="text-pink">nữ sinh Việt Nam</span>
           </h2>
           <p data-id="contact-sub">Mỗi sự kết nối đều có thể mở ra một cơ hội học tập mới cho các em. Nếu bạn muốn tìm
-            hiểu về chương trình, trở thành nhà tài trợ, đối tác hoặc tình nguyện viên, hãy liên hệ với chúng tôi.</p>
+            hiểu <br class="br-lg">về chương trình, trở thành nhà tài trợ, đối tác hoặc tình nguyện viên, hãy liên hệ với chúng&nbsp;tôi.</p>
           <div class="contact-details">
             <a class="config-link" data-link-key="contactEmail">info@therelayfund.org</a>
-            <a class="config-link" data-link-key="website">therelayfund.org</a>
+            <a class="config-link" data-link-key="facebookPage" data-id="contact-facebook">Facebook Sen Hồng</a>
           </div>
         </div>
       </div>
@@ -3011,28 +3027,34 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/2467d23d-1bb7-41fb-ac7c-a50b584a29f5.png" alt="The Relay Fund" class="footer-logo">
-          <p data-id="footer-copy">The Relay Fund – Học bổng Sen Hồng. Học bổng dành riêng cho nữ sinh Việt Nam — nghị
-            lực, tiềm năng và ước mơ không giới hạn.</p>
-          <div style="margin-top:20px;">
-            <a class="footer-donate-chip config-link" data-link-key="donorPartnerForm">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                </path>
-              </svg>
-              <span data-id="footer-donate">Ủng hộ quỹ</span>
-            </a>
+        <!-- Column 1: Relay Fund -->
+        <div class="footer-col">
+          <div class="footer-col-main footer-logo-card">
+            <img src="assets/partners/relay-fund-logo-color.png" alt="The Relay Fund">
           </div>
+          <p class="footer-col-note" data-id="footer-copy">Học bổng Sen Hồng dành riêng cho nữ sinh Việt Nam giàu nghị lực,
+            tiềm năng và khát vọng vươn lên.</p>
         </div>
-        <!-- U-GO sponsor: replaces the former link columns; logo kept unmodified on a white card (U-GO guideline) -->
-        <div class="footer-sponsor">
-          <h3 class="footer-sponsor-title" data-id="footer-sponsor-title">Nhà tài trợ đồng hành cùng<br>Học bổng Sen Hồng</h3>
-          <a class="footer-sponsor-card config-link" data-link-key="ugo" aria-label="U-GO (mở trong tab mới)"
+        <!-- Column 2: U-GO (logo kept unmodified, shown on a white card per U-GO guideline) -->
+        <div class="footer-col">
+          <h3 class="footer-col-head footer-col-title" data-id="footer-sponsor-title">Đối tác tài trợ</h3>
+          <a class="footer-col-main footer-logo-card config-link" data-link-key="ugo" aria-label="U-GO (mở trong tab mới)"
             data-aria-vi="U-GO (mở trong tab mới)" data-aria-en="U-GO (opens in a new tab)">
-            <img src="assets/partners/ugo-logo.png" alt="U-GO" class="footer-sponsor-logo">
+            <img src="assets/partners/ugo-logo.png" alt="U-GO">
           </a>
+        </div>
+        <!-- Column 3: Donate -->
+        <div class="footer-col">
+          <a class="footer-col-main footer-donate-chip config-link" data-link-key="donorPartnerForm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
+            <span data-id="footer-donate">Ủng hộ quỹ</span>
+          </a>
+          <p class="footer-col-note" data-id="footer-thanks">Trân trọng cảm ơn những tấm lòng đã chung tay tiếp sức cho nữ
+            sinh Việt Nam</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -3488,7 +3510,7 @@
       '[data-id="about-why-title-1"]': { vi: 'Mở ra cơ hội nghề nghiệp', en: 'Open career opportunities' },
       // EN drafts below (about-why-copy-1, about-why-footnote) — not reviewed
       '[data-id="about-why-copy-1"]': { vi: 'Người tốt nghiệp đại học, cao đẳng có mức thu nhập cao hơn 50–90% so với người chỉ tốt nghiệp trung học phổ thông<sup class="footnote-ref"><a href="#why-footnote-1" id="why-footnote-1-ref" aria-label="Xem nguồn số 1">[1]</a></sup>', en: 'Graduates of universities and colleges earn 50–90% more than those who completed only upper-secondary school<sup class="footnote-ref"><a href="#why-footnote-1" id="why-footnote-1-ref" aria-label="See source 1">[1]</a></sup>' },
-      '[data-id="about-why-footnote"]': { vi: '<span class="footnote-num">[1]</span> Nguồn: Parajuli, Dilip, Dung Kieu Vo, Jamil Salmi và Nguyet Thi Anh Tran. 2020. <em>Improving the Performance of Higher Education in Vietnam: Strategic Priorities and Policy Options</em>. Washington, DC: Ngân hàng Thế giới, trang 4.', en: '<span class="footnote-num">[1]</span> Source: Parajuli, Dilip, Dung Kieu Vo, Jamil Salmi, and Nguyet Thi Anh Tran. 2020. <em>Improving the Performance of Higher Education in Vietnam: Strategic Priorities and Policy Options</em>. Washington, DC: World Bank, p. 4.' },
+      '[data-id="about-why-footnote"]': { vi: '<span class="footnote-num">[1]</span> (Nguồn: Parajuli, Dilip, Dung Kieu Vo, Jamil Salmi và Nguyet Thi Anh Tran (2020). <em>Improving the Performance of Higher Education in Vietnam: Strategic Priorities and Policy Options</em>. Washington, DC: World Bank, tr. 4.)', en: '<span class="footnote-num">[1]</span> (Source: Parajuli, Dilip, Dung Kieu Vo, Jamil Salmi, and Nguyet Thi Anh Tran (2020). <em>Improving the Performance of Higher Education in Vietnam: Strategic Priorities and Policy Options</em>. Washington, DC: World Bank, p. 4.)' },
       '[data-id="about-why-title-2"]': { vi: 'Tác động đến gia đình', en: 'Strengthen families' },
       '[data-id="about-why-copy-2"]': { vi: 'Trình độ học vấn của người mẹ có ảnh hưởng tích cực đến sức khỏe và cơ hội phát triển của con cái.', en: 'A mother\'s education positively influences her children\'s health and opportunities to thrive.' },
       '[data-id="about-why-title-3"]': { vi: 'Lan tỏa đến cộng đồng', en: 'Create community impact' },
@@ -3533,7 +3555,6 @@
       '[data-id="story-dialog-badge"]': { vi: 'Câu chuyện Sen Hồng', en: 'Sen Hong Story' },
       '[data-id="inv-badge"]': { vi: 'Đồng hành cùng chúng tôi', en: 'Get Involved' },
       '[data-id="inv-h2"]': { vi: 'Bạn muốn <span class="text-pink">đồng hành</span> cùng Sen Hồng?', en: 'Want to <span class="text-pink">join</span> the Sen Hong journey?' },
-      '[data-id="inv-sub"]': { vi: 'Dù là nữ sinh ứng tuyển, tình nguyện viên nhiệt huyết hay nhà tài trợ – mỗi người đều có thể đồng hành cùng Sen Hồng theo cách của mình.', en: 'Whether you\'re a student applicant, a passionate volunteer, or a sponsor – everyone can walk alongside Sen Hong in their own way.' }, // EN draft — not reviewed
       '[data-id="involved-apply-title"]': { vi: 'Ứng tuyển học bổng', en: 'Apply for a scholarship' },
       '[data-id="involved-apply-copy"]': { vi: 'Bạn là nữ sinh đại học có hoàn cảnh khó khăn, nghị lực và ước mơ? Hồ sơ Sen Hồng đang chờ bạn.', en: 'Are you a resilient university student facing hardship and pursuing a dream? Sen Hong is here for you.' },
       '[data-id="involved-apply-cta"]': { vi: 'Ứng tuyển →', en: 'Apply →' },
@@ -3545,10 +3566,11 @@
       '[data-id="involved-partner-cta"]': { vi: 'Tài trợ →', en: 'Support us →' },
       '[data-id="contact-badge"]': { vi: 'Liên hệ', en: 'Contact' },
       '[data-id="contact-h2"]': { vi: 'Cùng chúng tôi tạo thêm cơ hội cho <span class="text-pink">nữ sinh Việt Nam</span>', en: 'Create more opportunities for <span class="text-pink">Vietnamese female students</span> with us' },
-      '[data-id="contact-sub"]': { vi: 'Mỗi sự kết nối đều có thể mở ra một cơ hội học tập mới cho các em. Nếu bạn muốn tìm hiểu về chương trình, trở thành nhà tài trợ, đối tác hoặc tình nguyện viên, hãy liên hệ với chúng tôi.', en: 'Every connection can open a new educational opportunity. If you would like to learn about our programs or join us as a donor, partner, or volunteer, we would love to hear from you.' },
+      '[data-id="contact-sub"]': { vi: 'Mỗi sự kết nối đều có thể mở ra một cơ hội học tập mới cho các em. Nếu bạn muốn tìm hiểu <br class="br-lg">về chương trình, trở thành nhà tài trợ, đối tác hoặc tình nguyện viên, hãy liên hệ với chúng&nbsp;tôi.', en: 'Every connection can open a new educational opportunity. If you would like to learn about our programs or join us as a donor, partner, or volunteer, we would love to hear from you.' },
       // EN drafts — not reviewed
-      '[data-id="footer-sponsor-title"]': { vi: 'Nhà tài trợ đồng hành cùng<br>Học bổng Sen Hồng', en: 'Sponsors supporting<br>the Sen Hong Scholarship' },
-      '[data-id="footer-copy"]': { vi: 'The Relay Fund – Học bổng Sen Hồng. Học bổng dành riêng cho nữ sinh Việt Nam — nghị lực, tiềm năng và ước mơ không giới hạn.', en: 'The Relay Fund – Sen Hong Scholarship. Supporting resilient Vietnamese female students with potential and limitless dreams.' },
+      '[data-id="footer-sponsor-title"]': { vi: 'Đối tác tài trợ', en: 'Sponsor partner' },
+      '[data-id="footer-thanks"]': { vi: 'Trân trọng cảm ơn những tấm lòng đã chung tay tiếp sức cho nữ sinh Việt Nam', en: 'With heartfelt thanks to everyone who is helping power the journey of Vietnamese female students' },
+      '[data-id="footer-copy"]': { vi: 'Học bổng Sen Hồng dành riêng cho nữ sinh Việt Nam giàu nghị lực, tiềm năng và khát vọng vươn lên.', en: 'The Sen Hong Scholarship is dedicated to resilient Vietnamese female students with potential and the aspiration to rise.' },
       '[data-id="footer-donate"]': { vi: 'Ủng hộ quỹ', en: 'Support the fund' },
       '[data-id="footer-copyright"]': { vi: '© 2026 The Relay Fund – Học bổng Sen Hồng. Bảo lưu mọi quyền.', en: '© 2026 The Relay Fund – Sen Hong Scholarship. All rights reserved.' }
     };
